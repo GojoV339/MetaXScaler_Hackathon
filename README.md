@@ -125,7 +125,7 @@ python inference.py
 ## Project Structure
 
 ```
-codereview-env/
+.
 ├── inference.py              ← Agent runner (MANDATORY in root)
 ├── app.py                    ← FastAPI server
 ├── openenv.yaml              ← OpenEnv spec metadata
