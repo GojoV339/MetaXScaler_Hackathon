@@ -9,7 +9,28 @@
     "fix": "Add a check: if b == 0: raise ValueError('Cannot divide by zero')",
     "difficulty": "easy",
     "category": "divide-by-zero",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_002",
@@ -21,7 +42,28 @@
     "fix": "Use lst[len(lst) - 1] or lst[-1] to access the last element; len(lst) is out of bounds.",
     "difficulty": "easy",
     "category": "off-by-one",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_003",
@@ -33,7 +75,28 @@
     "fix": "Use === instead of = for comparison: return n % 2 === 0;",
     "difficulty": "easy",
     "category": "assignment-vs-comparison",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_004",
@@ -45,7 +108,28 @@
     "fix": "Change recursive call to factorial(n - 1) to avoid infinite recursion.",
     "difficulty": "easy",
     "category": "infinite-recursion",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_005",
@@ -57,7 +141,28 @@
     "fix": "Fix the variable name: use 'name' (lowercase) instead of 'Name'. JavaScript is case-sensitive.",
     "difficulty": "easy",
     "category": "case-sensitivity",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_006",
@@ -69,7 +174,28 @@
     "fix": "",
     "difficulty": "easy",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_007",
@@ -81,7 +207,28 @@
     "fix": "",
     "difficulty": "easy",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_008",
@@ -93,7 +240,28 @@
     "fix": "",
     "difficulty": "easy",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_009",
@@ -105,7 +273,28 @@
     "fix": "Initialize max_val to float('-inf') or numbers[0] instead of 0. The current code fails for lists with only negative numbers.",
     "difficulty": "easy",
     "category": "wrong-initialization",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_010",
@@ -117,7 +306,28 @@
     "fix": "Change i <= arr.length to i < arr.length to prevent accessing an undefined index at arr[arr.length].",
     "difficulty": "easy",
     "category": "off-by-one",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_011",
@@ -129,7 +339,28 @@
     "fix": "Convert char to lowercase before checking: if char.lower() in vowels. The current code misses uppercase vowels like 'A', 'E', etc.",
     "difficulty": "medium",
     "category": "case-handling",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_012",
@@ -141,7 +372,28 @@
     "fix": "Object.assign performs a shallow copy only. Use structuredClone(obj) or JSON.parse(JSON.stringify(obj)) for a true deep clone of nested objects.",
     "difficulty": "medium",
     "category": "shallow-copy",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_013",
@@ -153,7 +405,28 @@
     "fix": "Never modify a list while iterating over it. Use return list(set(lst)) or iterate over a copy: for item in lst[:].",
     "difficulty": "medium",
     "category": "mutate-during-iteration",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_014",
@@ -165,7 +438,28 @@
     "fix": "parseInt without a radix can produce unexpected results. Use parseInt(input, 10). Also, parseInt('') returns NaN which is not > 0, but parseInt('0x10') returns 16. Always specify radix 10.",
     "difficulty": "medium",
     "category": "parseInt-radix",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_015",
@@ -177,7 +471,28 @@
     "fix": "result = a creates an alias, not a copy. This mutates the original dict 'a'. Use result = a.copy() or result = {**a, **b}.",
     "difficulty": "medium",
     "category": "reference-vs-copy",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_016",
@@ -189,7 +504,28 @@
     "fix": "",
     "difficulty": "medium",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_017",
@@ -201,7 +537,28 @@
     "fix": "",
     "difficulty": "medium",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_018",
@@ -213,7 +570,28 @@
     "fix": "response.json() returns a Promise. Add await: const data = await response.json(); Also add error handling for non-ok responses.",
     "difficulty": "medium",
     "category": "missing-await",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_019",
@@ -225,7 +603,28 @@
     "fix": "For very deeply nested lists this causes O(n*d) memory from repeated list creation. Use an iterative approach with a stack, or use a generator to yield items lazily to avoid creating intermediate lists.",
     "difficulty": "medium",
     "category": "recursive-memory",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_020",
@@ -237,7 +636,28 @@
     "fix": "Direct string comparison is vulnerable to timing attacks. Use a constant-time comparison function like crypto.timingSafeEqual(Buffer.from(input), Buffer.from(stored)). Also, passwords should be hashed, not compared as plaintext.",
     "difficulty": "medium",
     "category": "timing-attack",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_021",
@@ -249,7 +669,28 @@
     "fix": "This is vulnerable to SQL injection. Use parameterized queries: cursor.execute('SELECT * FROM users WHERE username = ?', (username,)). Never use f-strings or string concatenation for SQL queries.",
     "difficulty": "hard",
     "category": "sql-injection",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_022",
@@ -261,7 +702,28 @@
     "fix": "Never hardcode API keys in source code. Use environment variables: API_KEY = os.getenv('API_KEY'). Add the key to .env file and add .env to .gitignore.",
     "difficulty": "hard",
     "category": "hardcoded-secret",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_023",
@@ -273,7 +735,28 @@
     "fix": "This is vulnerable to Cross-Site Scripting (XSS). Sanitize user input before embedding in HTML. Use a templating engine with auto-escaping or use a library like DOMPurify. Never directly interpolate user input into HTML.",
     "difficulty": "hard",
     "category": "xss",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_024",
@@ -285,7 +768,28 @@
     "fix": "This is O(n^2) with an additional O(n) 'not in' check on each iteration, making it O(n^3). Use a Counter or set-based approach: seen = set(); duplicates = set(); for item in lst: if item in seen: duplicates.add(item); else: seen.add(item); return list(duplicates).",
     "difficulty": "hard",
     "category": "quadratic-complexity",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_025",
@@ -297,7 +801,28 @@
     "fix": "O(n^2) nested loop. Group items by category using a Map first, then pair within each group: const groups = new Map(); items.forEach(i => { if (!groups.has(i.category)) groups.set(i.category, []); groups.get(i.category).push(i); }); Then iterate within each group.",
     "difficulty": "hard",
     "category": "quadratic-complexity",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_026",
@@ -309,7 +834,28 @@
     "fix": "Race condition: counter += 1 is not atomic. Multiple threads can read the same value and overwrite each other's increments. Use a threading.Lock: lock = threading.Lock(); and wrap the increment with 'with lock: counter += 1'.",
     "difficulty": "hard",
     "category": "race-condition",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_027",
@@ -321,7 +867,28 @@
     "fix": "Using === undefined fails if the function legitimately returns undefined. Use 'key in cache' instead: if (!(key in cache)) { cache[key] = fn(...args); }. Also, JSON.stringify doesn't handle circular references or functions as arguments.",
     "difficulty": "hard",
     "category": "undefined-check",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_028",
@@ -330,10 +897,31 @@
     "has_bug": true,
     "bug_type": "security_vulnerability",
     "severity": "critical",
-    "fix": "eval() executes arbitrary code — this is a critical security vulnerability. Use json.load(f) for JSON configs, or ast.literal_eval() if you need Python literals. Never use eval() on untrusted input.",
+    "fix": "eval() executes arbitrary code \u2014 this is a critical security vulnerability. Use json.load(f) for JSON configs, or ast.literal_eval() if you need Python literals. Never use eval() on untrusted input.",
     "difficulty": "hard",
     "category": "code-injection",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_029",
@@ -345,7 +933,28 @@
     "fix": "",
     "difficulty": "hard",
     "category": "clean-code",
-    "task_levels": [1, 2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
   },
   {
     "id": "snippet_030",
@@ -357,6 +966,2127 @@
     "fix": "Executing a separate query per ID is an N+1 query problem. Use a single query with IN clause: cursor.execute('SELECT * FROM records WHERE id IN ({})'.format(','.join('?' * len(ids))), ids). Also use a context manager for the connection.",
     "difficulty": "hard",
     "category": "n-plus-one-query",
-    "task_levels": [2, 3]
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input",
+      "empty array"
+    ]
+  },
+  {
+    "id": "snippet_031",
+    "language": "python",
+    "code": "def calc_0(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_032",
+    "language": "python",
+    "code": "def calc_1(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_033",
+    "language": "python",
+    "code": "def calc_2(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_034",
+    "language": "python",
+    "code": "def calc_3(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_035",
+    "language": "python",
+    "code": "def calc_4(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_036",
+    "language": "python",
+    "code": "def calc_5(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_037",
+    "language": "python",
+    "code": "def calc_6(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_038",
+    "language": "python",
+    "code": "def calc_7(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_039",
+    "language": "python",
+    "code": "def calc_8(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_040",
+    "language": "python",
+    "code": "def calc_9(x):\n    # do it\n    return x * 86400 * 3.14",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract magic numbers to constants",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "magic_number"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative inputs"
+    ]
+  },
+  {
+    "id": "snippet_041",
+    "language": "javascript",
+    "code": "function a_0(b) {\n  return b + 1;\n  console.log('never runs');\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Remove dead code",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_smells": [
+      "dead_code",
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input"
+    ]
+  },
+  {
+    "id": "snippet_042",
+    "language": "javascript",
+    "code": "function a_1(b) {\n  return b + 1;\n  console.log('never runs');\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Remove dead code",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_smells": [
+      "dead_code",
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input"
+    ]
+  },
+  {
+    "id": "snippet_043",
+    "language": "javascript",
+    "code": "function a_2(b) {\n  return b + 1;\n  console.log('never runs');\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Remove dead code",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_smells": [
+      "dead_code",
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input"
+    ]
+  },
+  {
+    "id": "snippet_044",
+    "language": "javascript",
+    "code": "function a_3(b) {\n  return b + 1;\n  console.log('never runs');\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Remove dead code",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_smells": [
+      "dead_code",
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input"
+    ]
+  },
+  {
+    "id": "snippet_045",
+    "language": "javascript",
+    "code": "function a_4(b) {\n  return b + 1;\n  console.log('never runs');\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Remove dead code",
+    "difficulty": "easy",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_smells": [
+      "dead_code",
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null input"
+    ]
+  },
+  {
+    "id": "snippet_046",
+    "language": "python",
+    "code": "def god_func_0():\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Split into smaller functions",
+    "difficulty": "hard",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "too complex to test"
+    ]
+  },
+  {
+    "id": "snippet_047",
+    "language": "python",
+    "code": "def god_func_1():\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Split into smaller functions",
+    "difficulty": "hard",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "too complex to test"
+    ]
+  },
+  {
+    "id": "snippet_048",
+    "language": "python",
+    "code": "def god_func_2():\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Split into smaller functions",
+    "difficulty": "hard",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "too complex to test"
+    ]
+  },
+  {
+    "id": "snippet_049",
+    "language": "python",
+    "code": "def god_func_3():\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Split into smaller functions",
+    "difficulty": "hard",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "too complex to test"
+    ]
+  },
+  {
+    "id": "snippet_050",
+    "language": "python",
+    "code": "def god_func_4():\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n    pass\n",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Split into smaller functions",
+    "difficulty": "hard",
+    "category": "smell",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "code_smells": [
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "too complex to test"
+    ]
+  },
+  {
+    "id": "snippet_051",
+    "language": "javascript",
+    "code": "const get_user_0 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_052",
+    "language": "javascript",
+    "code": "const get_user_1 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_053",
+    "language": "javascript",
+    "code": "const get_user_2 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_054",
+    "language": "javascript",
+    "code": "const get_user_3 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_055",
+    "language": "javascript",
+    "code": "const get_user_4 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_056",
+    "language": "javascript",
+    "code": "const get_user_5 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_057",
+    "language": "javascript",
+    "code": "const get_user_6 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_058",
+    "language": "javascript",
+    "code": "const get_user_7 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_059",
+    "language": "javascript",
+    "code": "const get_user_8 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_060",
+    "language": "javascript",
+    "code": "const get_user_9 = (id) => {\n  db.query('SELECT * FROM users WHERE id = ' + id);\n}",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use parameterized queries to prevent SQL injection",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid id format"
+    ]
+  },
+  {
+    "id": "snippet_061",
+    "language": "javascript",
+    "code": "app.get('/file_0', (req, res) => {\n  const p = '/app/data/' + req.query.file;\n  res.sendFile(p);\n})",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "high",
+    "fix": "Validate file path to prevent path traversal",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "path_traversal"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "malicious path inputs"
+    ]
+  },
+  {
+    "id": "snippet_062",
+    "language": "javascript",
+    "code": "app.get('/file_1', (req, res) => {\n  const p = '/app/data/' + req.query.file;\n  res.sendFile(p);\n})",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "high",
+    "fix": "Validate file path to prevent path traversal",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "path_traversal"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "malicious path inputs"
+    ]
+  },
+  {
+    "id": "snippet_063",
+    "language": "javascript",
+    "code": "app.get('/file_2', (req, res) => {\n  const p = '/app/data/' + req.query.file;\n  res.sendFile(p);\n})",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "high",
+    "fix": "Validate file path to prevent path traversal",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "path_traversal"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "malicious path inputs"
+    ]
+  },
+  {
+    "id": "snippet_064",
+    "language": "javascript",
+    "code": "app.get('/file_3', (req, res) => {\n  const p = '/app/data/' + req.query.file;\n  res.sendFile(p);\n})",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "high",
+    "fix": "Validate file path to prevent path traversal",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "path_traversal"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "malicious path inputs"
+    ]
+  },
+  {
+    "id": "snippet_065",
+    "language": "javascript",
+    "code": "app.get('/file_4', (req, res) => {\n  const p = '/app/data/' + req.query.file;\n  res.sendFile(p);\n})",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "high",
+    "fix": "Validate file path to prevent path traversal",
+    "difficulty": "hard",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "path_traversal"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "malicious path inputs"
+    ]
+  },
+  {
+    "id": "snippet_066",
+    "language": "python",
+    "code": "def render_msg_0(msg):\n    return f'<div>{msg}</div>' # rendered directly in UI",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Sanitize user input to prevent XSS",
+    "difficulty": "medium",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "xss"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "HTML injection tags"
+    ]
+  },
+  {
+    "id": "snippet_067",
+    "language": "python",
+    "code": "def render_msg_1(msg):\n    return f'<div>{msg}</div>' # rendered directly in UI",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Sanitize user input to prevent XSS",
+    "difficulty": "medium",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "xss"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "HTML injection tags"
+    ]
+  },
+  {
+    "id": "snippet_068",
+    "language": "python",
+    "code": "def render_msg_2(msg):\n    return f'<div>{msg}</div>' # rendered directly in UI",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Sanitize user input to prevent XSS",
+    "difficulty": "medium",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "xss"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "HTML injection tags"
+    ]
+  },
+  {
+    "id": "snippet_069",
+    "language": "python",
+    "code": "def render_msg_3(msg):\n    return f'<div>{msg}</div>' # rendered directly in UI",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Sanitize user input to prevent XSS",
+    "difficulty": "medium",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "xss"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "HTML injection tags"
+    ]
+  },
+  {
+    "id": "snippet_070",
+    "language": "python",
+    "code": "def render_msg_4(msg):\n    return f'<div>{msg}</div>' # rendered directly in UI",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Sanitize user input to prevent XSS",
+    "difficulty": "medium",
+    "category": "security",
+    "task_levels": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "xss"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "HTML injection tags"
+    ]
+  },
+  {
+    "id": "snippet_071",
+    "language": "python",
+    "code": "def find_dups_0(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_072",
+    "language": "python",
+    "code": "def find_dups_1(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_073",
+    "language": "python",
+    "code": "def find_dups_2(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_074",
+    "language": "python",
+    "code": "def find_dups_3(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_075",
+    "language": "python",
+    "code": "def find_dups_4(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_076",
+    "language": "python",
+    "code": "def find_dups_5(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_077",
+    "language": "python",
+    "code": "def find_dups_6(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_078",
+    "language": "python",
+    "code": "def find_dups_7(arr):\n    res = []\n    for x in arr:\n        if arr.count(x) > 1 and x not in res:\n            res.append(x)\n    return res",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Use O(N) by creating a frequency map and then returning duplicates.",
+    "difficulty": "hard",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n\u00b2)",
+    "performance_issue": "List count inside a loop creates O(n^2)",
+    "is_testable": true,
+    "missing_tests": [
+      "large arrays"
+    ]
+  },
+  {
+    "id": "snippet_079",
+    "language": "javascript",
+    "code": "function process_0(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_080",
+    "language": "javascript",
+    "code": "function process_1(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_081",
+    "language": "javascript",
+    "code": "function process_2(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_082",
+    "language": "javascript",
+    "code": "function process_3(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_083",
+    "language": "javascript",
+    "code": "function process_4(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_084",
+    "language": "javascript",
+    "code": "function process_5(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_085",
+    "language": "javascript",
+    "code": "function process_6(users) {\n  return users.map(u => {\n    let x = [1,4,2].sort();\n    return u.val + x[0];\n  });\n}",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "medium",
+    "fix": "Move sorting logic outside of the map loop to prevent redundant computation.",
+    "difficulty": "medium",
+    "category": "performance",
+    "task_levels": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "code_smells": [
+      "duplicate_logic"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "Sorting inside map loop",
+    "is_testable": true,
+    "missing_tests": [
+      "empty users list"
+    ]
+  },
+  {
+    "id": "snippet_086",
+    "language": "javascript",
+    "code": "const fetchData_0 = async (url) => {\n  const r = await fetch(url);\n  return r.json();\n} // no try catch",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Add try/catch for fetch failures to allow mocking tests",
+    "difficulty": "hard",
+    "category": "testability",
+    "task_levels": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "fetch failure edge cases",
+      "network errors"
+    ]
+  },
+  {
+    "id": "snippet_087",
+    "language": "javascript",
+    "code": "const fetchData_1 = async (url) => {\n  const r = await fetch(url);\n  return r.json();\n} // no try catch",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Add try/catch for fetch failures to allow mocking tests",
+    "difficulty": "hard",
+    "category": "testability",
+    "task_levels": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "fetch failure edge cases",
+      "network errors"
+    ]
+  },
+  {
+    "id": "snippet_088",
+    "language": "javascript",
+    "code": "const fetchData_2 = async (url) => {\n  const r = await fetch(url);\n  return r.json();\n} // no try catch",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Add try/catch for fetch failures to allow mocking tests",
+    "difficulty": "hard",
+    "category": "testability",
+    "task_levels": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "fetch failure edge cases",
+      "network errors"
+    ]
+  },
+  {
+    "id": "snippet_089",
+    "language": "javascript",
+    "code": "const fetchData_3 = async (url) => {\n  const r = await fetch(url);\n  return r.json();\n} // no try catch",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Add try/catch for fetch failures to allow mocking tests",
+    "difficulty": "hard",
+    "category": "testability",
+    "task_levels": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "fetch failure edge cases",
+      "network errors"
+    ]
+  },
+  {
+    "id": "snippet_090",
+    "language": "javascript",
+    "code": "const fetchData_4 = async (url) => {\n  const r = await fetch(url);\n  return r.json();\n} // no try catch",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Add try/catch for fetch failures to allow mocking tests",
+    "difficulty": "hard",
+    "category": "testability",
+    "task_levels": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "fetch failure edge cases",
+      "network errors"
+    ]
+  },
+  {
+    "id": "snippet_091",
+    "language": "python",
+    "code": "def is_valid_0(name):\n    return len(name) > 3",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "none input",
+      "empty string",
+      "very long string"
+    ]
+  },
+  {
+    "id": "snippet_092",
+    "language": "python",
+    "code": "def is_valid_1(name):\n    return len(name) > 3",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "none input",
+      "empty string",
+      "very long string"
+    ]
+  },
+  {
+    "id": "snippet_093",
+    "language": "python",
+    "code": "def is_valid_2(name):\n    return len(name) > 3",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "none input",
+      "empty string",
+      "very long string"
+    ]
+  },
+  {
+    "id": "snippet_094",
+    "language": "python",
+    "code": "def is_valid_3(name):\n    return len(name) > 3",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "none input",
+      "empty string",
+      "very long string"
+    ]
+  },
+  {
+    "id": "snippet_095",
+    "language": "python",
+    "code": "def is_valid_4(name):\n    return len(name) > 3",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "none input",
+      "empty string",
+      "very long string"
+    ]
+  },
+  {
+    "id": "snippet_096",
+    "language": "javascript",
+    "code": "function add_0(a, b) {\n  return a + b;\n}",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null inputs",
+      "undefined inputs"
+    ]
+  },
+  {
+    "id": "snippet_097",
+    "language": "javascript",
+    "code": "function add_1(a, b) {\n  return a + b;\n}",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null inputs",
+      "undefined inputs"
+    ]
+  },
+  {
+    "id": "snippet_098",
+    "language": "javascript",
+    "code": "function add_2(a, b) {\n  return a + b;\n}",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null inputs",
+      "undefined inputs"
+    ]
+  },
+  {
+    "id": "snippet_099",
+    "language": "javascript",
+    "code": "function add_3(a, b) {\n  return a + b;\n}",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null inputs",
+      "undefined inputs"
+    ]
+  },
+  {
+    "id": "snippet_100",
+    "language": "javascript",
+    "code": "function add_4(a, b) {\n  return a + b;\n}",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "null inputs",
+      "undefined inputs"
+    ]
   }
 ]

@@ -33,6 +33,26 @@ tasks:
     difficulty: hard
     description: "Full code review: detect, classify, assess severity, and suggest fix"
 
+  - id: code_smell_detection
+    level: 4
+    difficulty: medium
+    description: "Identify code quality issues: magic numbers, dead code, god functions"
+
+  - id: security_audit
+    level: 5
+    difficulty: hard
+    description: "OWASP security audit: SQL injection, XSS, hardcoded secrets"
+
+  - id: performance_optimization
+    level: 6
+    difficulty: hard
+    description: "Identify Big-O complexity issues and suggest faster algorithms"
+
+  - id: test_coverage_review
+    level: 7
+    difficulty: hard
+    description: "Assess testability and identify missing unit test cases"
+
 observation_space:
   type: object
   fields:

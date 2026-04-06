@@ -64,7 +64,88 @@ TASK_3 = TaskConfig(
 )
 
 # All tasks indexed by level
-_TASKS = {1: TASK_1, 2: TASK_2, 3: TASK_3}
+TASK_4 = TaskConfig(
+    task_id="code_smell_detection",
+    level=4,
+    name="Code Smell Detection",
+    description=(
+        "Identify code quality issues in the snippet. Look for: magic numbers "
+        "(hardcoded values that should be constants), dead code (unreachable or "
+        "unused code), god functions (functions doing too much), duplicate logic "
+        "(copy-pasted blocks), poor naming (single letters, misleading names). "
+        "Return a list of smells found. Partial credit per smell correctly identified."
+    ),
+    action_space={
+        "has_bug": "bool — is there a code quality issue?",
+        "bug_type": "use 'logic_error' for smells",
+        "severity": "low/medium/high based on smell severity",
+        "suggested_fix": "List each smell and how to fix it specifically",
+    },
+    max_score=1.0,
+)
+
+TASK_5 = TaskConfig(
+    task_id="security_audit",
+    level=5,
+    name="Security Audit",
+    description=(
+        "Perform a security audit on the code snippet based on OWASP Top 10. "
+        "Identify: SQL injection risks (string concatenation in queries), "
+        "XSS vulnerabilities (unsanitized user input in HTML), "
+        "hardcoded secrets (API keys, passwords in source), "
+        "path traversal risks (unvalidated file paths), "
+        "insecure deserialization. Rate the severity and provide a specific fix."
+    ),
+    action_space={
+        "has_bug": "bool — is there a security vulnerability?",
+        "bug_type": "security_vulnerability if yes",
+        "severity": "critical for injection/XSS, high for hardcoded secrets",
+        "suggested_fix": "Specific OWASP-compliant fix with code example",
+    },
+    max_score=1.0,
+)
+
+TASK_6 = TaskConfig(
+    task_id="performance_optimization",
+    level=6,
+    name="Performance Optimization",
+    description=(
+        "Analyze the time and space complexity of the code. "
+        "Identify performance bottlenecks: nested loops on large data (O(n²)+), "
+        "N+1 database query patterns, redundant computations inside loops, "
+        "sorting inside loops, inefficient data structures. "
+        "State the current Big-O complexity and suggest a faster algorithm or approach."
+    ),
+    action_space={
+        "has_bug": "bool — is there a performance issue?",
+        "bug_type": "performance_issue if yes",
+        "severity": "high if O(n²)+, medium if redundant, low if minor",
+        "suggested_fix": "State current O() complexity + suggest specific optimized approach with O() improvement",
+    },
+    max_score=1.0,
+)
+
+TASK_7 = TaskConfig(
+    task_id="test_coverage_review",
+    level=7,
+    name="Test Coverage Review",
+    description=(
+        "Assess whether the code is testable and identify missing test cases. "
+        "Check: are there untested edge cases (null/None inputs, empty collections, "
+        "boundary values, negative numbers)? Is the code structured for testability "
+        "(no hidden side effects, injectable dependencies)? "
+        "Suggest 2-3 specific unit tests that should be written."
+    ),
+    action_space={
+        "has_bug": "bool — does code lack adequate test coverage or testability?",
+        "bug_type": "logic_error for untestable design",
+        "severity": "based on how critical the missing tests are",
+        "suggested_fix": "List 2-3 specific test cases: inputs, expected outputs, what they verify",
+    },
+    max_score=1.0,
+)
+
+_TASKS = {1: TASK_1, 2: TASK_2, 3: TASK_3, 4: TASK_4, 5: TASK_5, 6: TASK_6, 7: TASK_7}
 
 
 def get_task(level: TaskLevel) -> TaskConfig:
@@ -87,12 +168,12 @@ def get_task(level: TaskLevel) -> TaskConfig:
 
 
 def list_all_tasks() -> List[TaskConfig]:
-    """Return all three task configurations in order.
+    """Return all task configurations in order.
 
     Returns:
-        List of [Task1, Task2, Task3].
+        List of all TaskConfigs.
     """
-    return [TASK_1, TASK_2, TASK_3]
+    return [TASK_1, TASK_2, TASK_3, TASK_4, TASK_5, TASK_6, TASK_7]
 
 
 def get_task_description_for_prompt(level: TaskLevel) -> str:

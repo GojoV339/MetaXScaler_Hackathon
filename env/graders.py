@@ -249,16 +249,200 @@ def _penalize_reward_hack(action: Action) -> float:
 # Grader factory
 # ──────────────────────────────────────────────────────────────────────────────
 
+# ──────────────────────────────────────────────────────────────────────────────
+# Task 4 — Code Smell Detection
+# ──────────────────────────────────────────────────────────────────────────────
+
+def grade_task4(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    expected_smells = ground_truth.get("code_smells", [])
+    suggested = action.suggested_fix.lower()
+    
+    score = 0.0
+    count = 0
+    
+    if expected_smells and expected_smells != ["none"]:
+        score_per_smell = 0.8 / max(len(expected_smells), 1)
+        for smell in expected_smells:
+            if smell.replace("_", " ") in suggested or smell in suggested:
+                score += score_per_smell
+                count += 1
+        
+        if count == len(expected_smells):
+            score += 0.20
+            
+    if action.has_bug != (expected_smells != ["none"]):
+        score -= 0.20
+        
+    score = max(0.0, min(score, 1.0))
+    is_correct = score >= 0.6
+    
+    feedback = f"Found {count}/{len(expected_smells)} smells. Score: {score:.2f}."
+    
+    return Reward(
+        score=score,
+        breakdown={"smells_found": count, "total_smells": len(expected_smells), "bonus": 0.20 if count == len(expected_smells) and expected_smells != ["none"] else 0.0},
+        feedback=feedback,
+        is_correct=is_correct,
+    )
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Task 5 — Security Audit
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _llm_judge_security(action: Action, ground_truth: Dict[str, Any]) -> float:
+    api_base = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
+    api_key = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+    model = os.getenv("MODEL_NAME")
+    if not api_key or not model: return 0.3
+    
+    sys_prompt = (
+        "Evaluate if the fix correctly addresses the OWASP vulnerability. "
+        "Score on: correctness of fix (0-1), specificity (0-1), security best practice alignment (0-1), overall (0-1). "
+        "Return exact JSON: {\"overall\": 0.0-1.0}"
+    )
+    user_msg = f"Expected vulns: {ground_truth.get('owasp_issues')}\nAgent fix: {action.suggested_fix}\nCode: {ground_truth.get('code')}"
+    
+    try:
+        client = OpenAI(base_url=api_base, api_key=api_key)
+        resp = client.chat.completions.create(model=model, messages=[{"role": "system", "content": sys_prompt}, {"role": "user", "content": user_msg}], temperature=0.1, max_tokens=200)
+        raw = resp.choices[0].message.content.strip()
+        if raw.startswith("```"): raw = raw.split("\n", 1)[1] if "\n" in raw else raw[3:]
+        if raw.endswith("```"): raw = raw[: raw.rfind("```")]
+        res = json.loads(raw.strip())
+        return max(0.0, min(float(res.get("overall", 0.3)), 1.0))
+    except Exception:
+        return 0.3
+
+def grade_task5(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    expected_vulns = ground_truth.get("owasp_issues", ["none"])
+    has_vuln = expected_vulns != ["none"]
+    
+    det_score = 0.30 if action.has_bug == has_vuln else 0.0
+    type_score = 0.20 if (has_vuln and action.bug_type == "security_vulnerability") else 0.0
+    
+    expected_severity = ground_truth.get("severity", "none")
+    sev_score = 0.10 if (has_vuln and action.severity == expected_severity) else 0.0
+    
+    fix_score = _llm_judge_security(action, ground_truth) * 0.40 if has_vuln and action.has_bug else (0.40 if not has_vuln else 0.0)
+    
+    total = min(det_score + type_score + sev_score + fix_score, 1.0)
+    
+    return Reward(
+        score=total, breakdown={"detection": det_score, "type": type_score, "severity": sev_score, "fix": fix_score},
+        feedback=f"Score: {total:.2f}", is_correct=total >= 0.6
+    )
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Task 6 — Performance Optimization
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _llm_judge_performance(action: Action, ground_truth: Dict[str, Any]) -> float:
+    api_base = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
+    api_key = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+    model = os.getenv("MODEL_NAME")
+    if not api_key or not model: return 0.3
+    
+    sys_prompt = (
+        "Evaluate the performance optimization suggestion. "
+        "Score on: correctly identified the bottleneck (0-1), suggested improvement is actually faster (0-1), Big-O improvement stated correctly (0-1), overall (0-1). "
+        "Return exact JSON: {\"overall\": 0.0-1.0}"
+    )
+    user_msg = f"Expected bottleneck: {ground_truth.get('performance_issue')}\nAgent fix: {action.suggested_fix}\nCode: {ground_truth.get('code')}"
+    
+    try:
+        client = OpenAI(base_url=api_base, api_key=api_key)
+        resp = client.chat.completions.create(model=model, messages=[{"role": "system", "content": sys_prompt}, {"role": "user", "content": user_msg}], temperature=0.1, max_tokens=200)
+        raw = resp.choices[0].message.content.strip()
+        if "```" in raw: raw = raw.replace("```json", "").replace("```", "")
+        return max(0.0, min(float(json.loads(raw.strip()).get("overall", 0.3)), 1.0))
+    except Exception:
+        return 0.3
+
+def grade_task6(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    has_perf_issue = ground_truth.get("performance_issue", "none") != "none"
+    det_score = 0.20 if action.has_bug == has_perf_issue else 0.0
+    
+    expected_comp = ground_truth.get("time_complexity", "O(1)")
+    comp_score = 0.30 if (has_perf_issue and expected_comp.lower() in action.suggested_fix.lower()) else 0.0
+    
+    fix_score = _llm_judge_performance(action, ground_truth) * 0.50 if has_perf_issue and action.has_bug else (0.50 if not has_perf_issue else 0.0)
+    
+    total = min(det_score + comp_score + fix_score, 1.0)
+    
+    return Reward(
+        score=total, breakdown={"detection": det_score, "complexity": comp_score, "fix": fix_score},
+        feedback=f"Score: {total:.2f}", is_correct=total >= 0.6
+    )
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Task 7 — Test Coverage Review
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _llm_judge_tests(action: Action, ground_truth: Dict[str, Any]) -> float:
+    api_base = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
+    api_key = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+    model = os.getenv("MODEL_NAME")
+    if not api_key or not model: return 0.3
+    
+    sys_prompt = (
+        "Evaluate the test coverage suggestions. "
+        "Score on: correctly identified missing test cases (0-1), test suggestions are specific with inputs and expected outputs (0-1), covers important edge cases (0-1), overall (0-1). "
+        "Return exact JSON: {\"overall\": 0.0-1.0}"
+    )
+    user_msg = f"Expected missing: {ground_truth.get('missing_tests')}\nAgent fix: {action.suggested_fix}\nCode: {ground_truth.get('code')}"
+    
+    try:
+        client = OpenAI(base_url=api_base, api_key=api_key)
+        resp = client.chat.completions.create(model=model, messages=[{"role": "system", "content": sys_prompt}, {"role": "user", "content": user_msg}], temperature=0.1, max_tokens=200)
+        raw = resp.choices[0].message.content.strip()
+        if "```" in raw: raw = raw.replace("```json", "").replace("```", "")
+        return max(0.0, min(float(json.loads(raw.strip()).get("overall", 0.3)), 1.0))
+    except Exception:
+        return 0.3
+
+def grade_task7(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    exp_testable = ground_truth.get("is_testable", True)
+    exp_missing = ground_truth.get("missing_tests", ["none"])
+    
+    test_score = 0.20 if action.has_bug == (not exp_testable or exp_missing != ["none"]) else 0.0
+    
+    missing_score = 0.0
+    if len(exp_missing) > 0 and exp_missing != ["none"]:
+        for t in exp_missing:
+            if t.lower() in action.suggested_fix.lower():
+                missing_score += 0.30 / len(exp_missing)
+                
+    fix_score = _llm_judge_tests(action, ground_truth) * 0.50 if action.has_bug else (0.50 if (exp_testable and exp_missing == ["none"]) else 0.0)
+    
+    total = min(test_score + missing_score + fix_score, 1.0)
+    
+    return Reward(
+        score=total, breakdown={"testability": test_score, "missing": missing_score, "fix": fix_score},
+        feedback=f"Score: {total:.2f}", is_correct=total >= 0.6
+    )
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Grader factory
+# ──────────────────────────────────────────────────────────────────────────────
+
 def get_grader(task_level: int) -> Callable[[Action, Dict[str, Any]], Reward]:
     """Return the grading function for the given task level.
 
     Args:
-        task_level: 1, 2, or 3.
+        task_level: 1 through 7.
 
     Returns:
         A callable (action, ground_truth) -> Reward.
     """
-    graders = {1: grade_task1, 2: grade_task2, 3: grade_task3}
+    graders = {
+        1: grade_task1,
+        2: grade_task2,
+        3: grade_task3,
+        4: grade_task4,
+        5: grade_task5,
+        6: grade_task6,
+        7: grade_task7,
+    }
     if task_level not in graders:
-        raise ValueError(f"Invalid task level: {task_level}. Must be 1, 2, or 3.")
+        raise ValueError(f"No grader for task level {task_level}")
     return graders[task_level]

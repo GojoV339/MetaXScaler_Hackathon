@@ -64,10 +64,10 @@ async def reset(request: ResetRequest = ResetRequest()):
     global env
     try:
         task_level = request.task_level
-        if task_level not in (1, 2, 3):
+        if task_level not in range(1, 8):
             raise HTTPException(
                 status_code=400,
-                detail=f"Invalid task_level: {task_level}. Must be 1, 2, or 3.",
+                detail=f"Invalid task_level: {task_level}. Must be between 1 and 7.",
             )
         env = CodeReviewEnv(task_level=task_level)
         observation = env.reset()

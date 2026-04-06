@@ -48,7 +48,7 @@ class CodeReviewEnv:
         )
         all_snippets = self._load_snippets(path)
         self._snippets: List[Dict[str, Any]] = [
-            s for s in all_snippets if task_level in s.get("task_levels", [1, 2, 3])
+            s for s in all_snippets if task_level in s.get("task_levels", [1, 2, 3, 4, 5, 6, 7])
         ]
         if not self._snippets:
             logger.warning(
@@ -201,11 +201,15 @@ class CodeReviewEnv:
         """Build an optional context hint based on the current task level.
 
         Returns:
-            A hint string for levels 2-3, or None for level 1.
+            A hint string for levels 2-7, or None for level 1.
         """
         hints = {
             1: None,
-            2: "Focus on identifying the specific type of bug.",
+            2: "Focus on identifying the specific type of bug if one exists.",
             3: "Provide a specific, implementable fix. Vague suggestions score 0.",
+            4: "Look for code quality issues: magic numbers, dead code, god functions, duplicate logic, poor naming. List ALL smells you find in your suggested_fix.",
+            5: "Perform an OWASP security audit. Check for: SQL injection, XSS, hardcoded secrets, path traversal. State the vulnerability type and provide a specific secure fix.",
+            6: "Analyze time complexity. State the current Big-O notation and identify the specific bottleneck. Suggest a faster algorithm with its Big-O in your fix.",
+            7: "Assess testability and list missing tests. In suggested_fix, provide 2-3 specific test cases with: input values, expected output, and what edge case they cover.",
         }
         return hints.get(self.task_level)
