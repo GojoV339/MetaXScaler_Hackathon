@@ -1,0 +1,64 @@
+name: codereview-env
+version: "1.0.0"
+description: >
+  A reinforcement learning environment where an AI agent learns to perform
+  professional code reviews. The agent detects bugs, classifies their type,
+  assesses severity, and suggests specific fixes across three difficulty levels.
+
+tags:
+  - openenv
+  - code-review
+  - software-engineering
+  - reinforcement-learning
+
+author: "Palle Venkata Dharaneswara Reddy"
+
+environment:
+  type: text
+  api_base: http://0.0.0.0:7860
+
+tasks:
+  - id: bug_detection
+    level: 1
+    difficulty: easy
+    description: "Detect whether a code snippet contains a bug"
+
+  - id: bug_classification
+    level: 2
+    difficulty: medium
+    description: "Detect and classify the type of bug in a code snippet"
+
+  - id: full_review
+    level: 3
+    difficulty: hard
+    description: "Full code review: detect, classify, assess severity, and suggest fix"
+
+observation_space:
+  type: object
+  fields:
+    snippet_id: string
+    code: string
+    language: string
+    task_level: integer
+    step_number: integer
+    context_hint: string (optional)
+
+action_space:
+  type: object
+  fields:
+    has_bug: boolean
+    bug_type: "logic_error | security_vulnerability | performance_issue | syntax_error | no_bug"
+    severity: "low | medium | high | critical | none"
+    suggested_fix: string
+
+reward:
+  range: [0.0, 1.0]
+  type: float
+  description: "Partial credit awarded across all tasks. Task 3 uses LLM-as-judge for fix quality."
+
+endpoints:
+  reset: POST /reset
+  step: POST /step
+  state: GET /state
+  tasks: GET /tasks
+  health: GET /health

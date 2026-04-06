@@ -70,19 +70,21 @@ Scoring: 0.15 detection + 0.15 type + 0.20 severity + 0.50 fix quality (LLM-judg
 
 ## Baseline Scores
 
-Scores produced by running `python inference.py` with `meta-llama/Llama-3.3-70B-Instruct`:
+Scores produced by running `python inference.py` with `Qwen/Qwen2.5-Coder-32B-Instruct`:
 
 | Task | Name | Mean Score | Min | Max |
 |------|------|-----------|-----|-----|
-| 1 | Bug Detection (Easy) | ~0.82 | — | — |
-| 2 | Bug Classification (Medium) | ~0.64 | — | — |
-| 3 | Full Code Review (Hard) | ~0.41 | — | — |
+| 1 | Bug Detection (Easy) | 0.600 | 0.000 | 1.000 |
+| 2 | Bug Classification (Medium) | 0.800 | 0.000 | 1.000 |
+| 3 | Full Code Review (Hard) | 0.840 | 0.650 | 1.000 |
+
+**Overall Mean Score: 0.747**
 
 To reproduce:
 ```bash
 export API_BASE_URL="https://router.huggingface.co/v1"
 export HF_TOKEN="your_token"
-export MODEL_NAME="meta-llama/Llama-3.3-70B-Instruct"
+export MODEL_NAME="Qwen/Qwen2.5-Coder-32B-Instruct"
 python inference.py
 ```
 
