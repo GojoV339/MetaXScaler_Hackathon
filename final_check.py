@@ -1,4 +1,4 @@
-import requests, os, json
+import requests, os, json, re
 
 BASE = 'https://dharaneswarreddy-codereview-env.hf.space'
 checks = []
@@ -7,6 +7,7 @@ checks = []
 for f in ['inference.py', 'Dockerfile', 'openenv.yaml', 'README.md', 'requirements.txt']:
     checks.append((os.path.exists(f), f + ' exists'))
 
+# Snippet count (we have 100)
 s = json.load(open('env/data/snippets.json'))
 checks.append((len(s) == 100, str(len(s)) + '/100 snippets'))
 
@@ -29,19 +30,20 @@ try:
 except Exception as e:
     checks.append((False, 'Live endpoint error: ' + str(e)))
 
-# No hardcoded secrets
+# No hardcoded real tokens (regex: hf_ followed by 20+ alphanumeric chars)
 for f in ['inference.py', 'app.py']:
     c = open(f).read()
-    checks.append(('hf_ggt' not in c and 'hf_' not in c.lower(), 'no hardcoded HF key in ' + f))
+    has_real_token = bool(re.search(r'hf_[A-Za-z0-9]{20,}', c))
+    checks.append((not has_real_token, 'no hardcoded key in ' + f))
 
 print('=' * 45)
 passed = sum(1 for ok, _ in checks if ok)
 for ok, name in checks:
     status = 'PASS' if ok else 'FAIL'
-    print(status + '  ' + name)
+    print(status + ' - ' + name)
 print('=' * 45)
 print(str(passed) + '/' + str(len(checks)) + ' passed')
 if passed == len(checks):
-    print('READY TO SUBMIT')
+    print('READY TO SUBMIT ✅')
 else:
-    print('FIX FAILURES FIRST')
+    print('FIX FAILURES FIRST ❌')
