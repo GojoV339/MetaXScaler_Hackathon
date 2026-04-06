@@ -74,11 +74,11 @@ Scores produced by running `python inference.py` with `Qwen/Qwen2.5-Coder-32B-In
 
 | Task | Name | Mean Score | Min | Max |
 |------|------|-----------|-----|-----|
-| 1 | Bug Detection (Easy) | 0.600 | 0.000 | 1.000 |
-| 2 | Bug Classification (Medium) | 0.800 | 0.000 | 1.000 |
-| 3 | Full Code Review (Hard) | 0.840 | 0.650 | 1.000 |
+| 1 | Bug Detection (Easy) | 0.400 | — | — |
+| 2 | Bug Classification (Medium) | 0.880 | — | — |
+| 3 | Full Code Review (Hard) | 0.500 | — | — |
 
-**Overall Mean Score: 0.747**
+**Overall Mean Score: 0.593**
 
 To reproduce:
 ```bash
