@@ -28,9 +28,10 @@ load_dotenv()
 # Configuration (from environment variables — never hardcoded)
 # ──────────────────────────────────────────────────────────────────────────────
 
-API_BASE_URL = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
+API_BASE_URL = os.getenv("API_BASE_URL", "https://api.groq.com/openai/v1")
 API_KEY = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME")
+MODEL_NAME = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
+BENCHMARK = "codereview-env"
 MAX_STEPS = 8
 TEMPERATURE = 0.2
 MAX_TOKENS = 500
@@ -193,6 +194,9 @@ def run_task(
     print(f"{'='*60}")
 
     for i in range(num_episodes):
+        # Emit mandatory [START] line
+        print(f"[START] task={task.task_id} env={BENCHMARK} model={MODEL_NAME}")
+
         # Reset environment for a new snippet
         obs = env.reset()
 
@@ -200,6 +204,8 @@ def run_task(
         user_prompt = build_user_prompt(obs)
 
         # Call LLM
+        error_msg = "null"
+        raw_response = ""
         try:
             response = client.chat.completions.create(
                 model=MODEL_NAME,
@@ -212,8 +218,8 @@ def run_task(
             )
             raw_response = response.choices[0].message.content or ""
         except Exception as e:
+            error_msg = str(e).replace("\n", " ")
             print(f"  Episode {i+1}/{num_episodes}: LLM error — {e}")
-            raw_response = ""
 
         # Parse the LLM response into an Action
         action = parse_action(raw_response)
@@ -221,6 +227,13 @@ def run_task(
         # Step the environment
         _, reward, done, info = env.step(action)
         scores.append(reward.score)
+
+        # Emit mandatory [STEP] line
+        action_str = f"has_bug={action.has_bug},bug_type={action.bug_type}"
+        print(f"[STEP] step=1 action={action_str} reward={reward.score:.2f} done={str(done).lower()} error={error_msg}")
+
+        # Emit mandatory [END] line
+        print(f"[END] success={str(reward.is_correct).lower()} steps=1 rewards={reward.score:.2f}")
 
         print(
             f"  Episode {i+1}/{num_episodes}: "
