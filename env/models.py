@@ -16,7 +16,7 @@ BugType = Literal[
     "no_bug",
 ]
 Severity = Literal["low", "medium", "high", "critical", "none"]
-TaskLevel = Literal[1, 2, 3]
+TaskLevel = Literal[1, 2, 3, 4, 5, 6, 7]
 
 
 class Observation(BaseModel):

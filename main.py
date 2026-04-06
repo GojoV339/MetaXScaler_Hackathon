@@ -1,5 +1,5 @@
 def main():
-    print("Hello from meta-hackathon!")
+    print("Hello from codereview-env!")
 
 
 if __name__ == "__main__":
