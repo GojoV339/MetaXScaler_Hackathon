@@ -19,3 +19,10 @@ dependencies = [
 
 [project.scripts]
 server = "server.app:start"
+
+[tool.hatch.build.targets.wheel]
+packages = ["env", "server"]
+py-modules = ["app.py", "inference.py"]
+
+[tool.hatch.build.targets.sdist]
+include = ["env", "server", "app.py", "inference.py"]
