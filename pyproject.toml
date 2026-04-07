@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "codereview-env"
 version = "1.0.0"
 description = "RL environment for AI code review"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.110.0",
     "uvicorn>=0.29.0",
