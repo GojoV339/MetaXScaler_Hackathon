@@ -7,15 +7,15 @@ checks = []
 for f in ['inference.py', 'Dockerfile', 'openenv.yaml', 'README.md', 'requirements.txt']:
     checks.append((os.path.exists(f), f + ' exists'))
 
-# Snippet count (we have 100)
+# Snippet count (we have 120 now)
 s = json.load(open('env/data/snippets.json'))
-checks.append((len(s) == 100, str(len(s)) + '/100 snippets'))
+checks.append((len(s) == 120, str(len(s)) + '/120 snippets'))
 
 # Live endpoint checks
 try:
     checks.append((requests.get(f'{BASE}/health').status_code == 200, 'health 200'))
     tasks = requests.get(f'{BASE}/tasks').json()
-    checks.append((len(tasks) == 7, str(len(tasks)) + '/7 tasks'))
+    checks.append((len(tasks) == 15, str(len(tasks)) + '/15 tasks'))
     r = requests.post(f'{BASE}/reset', json={'task_level': 1})
     obs = r.json()
     checks.append(('snippet_id' in obs, 'reset returns observation'))
