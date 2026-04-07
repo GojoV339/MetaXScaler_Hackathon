@@ -83,18 +83,60 @@ Agent assesses testability and lists 2-3 specific missing unit tests with
 inputs, expected outputs, and edge cases covered.
 Scoring: 0.20 testability + 0.30 missing tests + 0.50 suggestions (LLM-judged).
 
+### Task 8 — Refactoring Opportunity Detection (Medium)
+Agent identifies specific refactoring patterns: extract_method, introduce_parameter_object,
+remove_duplicate_code, decompose_conditional. Must cite exact locations.
+Scoring: 0.25 detection + 0.75 fix quality (LLM-judged on specificity of recommendations).
+
+### Task 9 — SOLID Principles Violation Detection (Hard)
+Agent detects violations of SRP, OCP, LSP, ISP, DIP in class/module design.
+Must name the violated principle, affected component, and explain why violated.
+Scoring: 0.30 detection + 0.30 keyword match + 0.40 fix (LLM-judged).
+
+### Task 10 — Error Handling Review (Medium)
+Agent evaluates error handling: bare excepts, silent failures, missing try/except,
+no logging. Returns error_handling_score (0-10) + issues + fix_suggestions.
+Scoring: 0.25 detection + 0.25 term match + 0.50 fix (LLM-judged).
+
+### Task 11 — Documentation Quality Review (Easy-Medium)
+Agent assesses docstrings, type hints, parameter docs. Returns doc_quality_score (0-10)
++ missing items + a concrete improved docstring example.
+Scoring: 0.25 detection + 0.25 term match + 0.50 fix (LLM-judged).
+
+### Task 12 — Concurrency & Race Condition Detection (Hard)
+Agent detects race conditions, missing locks, blocking async calls, deadlock risks.
+Returns list of {issue_type, affected_code, risk, fix}.
+Scoring: 0.30 detection + 0.20 term match + 0.50 fix (LLM-judged).
+
+### Task 13 — API Design Review (Hard)
+Agent evaluates naming consistency, param count, input validation, REST design.
+Returns api_score (0-10) + issues + improved_signature.
+Scoring: 0.25 detection + 0.25 term match + 0.50 fix (LLM-judged).
+
+### Task 14 — Code Comparison Review (Hard)
+Agent compares v1 vs v2 code: determines if v2 is an improvement, identifies new bugs,
+returns {improvement, new_issues, verdict, reason}.
+Scoring: 0.25 detection + 0.25 term match + 0.50 fix (LLM-judged).
+
+### Task 15 — Dependency & Import Review (Medium)
+Agent identifies unused imports, risky packages (pickle, eval), over-importing.
+Returns {unused_imports, risky_dependencies, cleaner_imports}.
+Scoring: 0.25 detection + 0.35 issue match + 0.40 fix (LLM-judged).
+
 ## Reward Design
 
 - **Deterministic scoring** for Tasks 1-2 (same input = same score)
-- **LLM-as-judge** for Task 3 fix quality evaluation
-- **Anti-hack penalties**: -0.1 for vague/low-effort fixes (<10 chars, generic phrases like "fix the bug", TODO placeholders)
+- **LLM-as-judge** for Tasks 3-15 fix quality evaluation
+- **Structured JSON output** required for Tasks 8-15 (refactoring, SOLID, error handling, etc.)
+- **Anti-hack penalties**: -0.1 for vague/low-effort fixes (<10 chars, TODO placeholders)
 - **Partial credit**: agents get proportional scores for partially correct answers
 
 ## Dataset
-- 100 labeled code snippets (Python and JavaScript)
+- 120 labeled code snippets (Python and JavaScript)
 - 30 original snippets covering bugs (Tasks 1-3)
 - 70 extended snippets covering smells, security, performance, testability (Tasks 4-7)
-- Distribution: 20 smell-focused, 20 security-focused, 15 performance-focused, 15 testability-focused
+- 20 advanced snippets covering refactoring, SOLID, error handling, docs, concurrency, API, comparison, dependencies (Tasks 8-15)
+- Distribution: 5 refactoring, 3 SOLID, 3 error handling, 2 docs, 2 concurrency, 2 API design, 2 comparison, 2 dependency
 
 ## Baseline Scores
 
@@ -102,15 +144,23 @@ Scores produced by running `uv run python inference.py` with `llama-3.3-70b-vers
 
 | Task | Name | Mean Score |
 |------|------|-----------|
-| 1 | Bug Detection (Easy) | 0.600 |
-| 2 | Bug Classification (Medium) | 0.800 |
-| 3 | Full Code Review (Hard) | 0.760 |
-| 4 | Code Smell Detection (Medium) | 0.000 |
-| 5 | Security Audit (Hard) | 0.504 |
-| 6 | Performance Optimization (Hard) | 0.590 |
+| 1 | Bug Detection (Easy) | 0.400 |
+| 2 | Bug Classification (Medium) | 0.600 |
+| 3 | Full Code Review (Hard) | 0.566 |
+| 4 | Code Smell Detection (Medium) | 0.360 |
+| 5 | Security Audit (Hard) | 0.684 |
+| 6 | Performance Optimization (Hard) | 0.640 |
 | 7 | Test Coverage Review (Hard) | 0.380 |
+| 8 | Refactoring Opportunity Detection (Medium) | 1.000 |
+| 9 | SOLID Principles Violation Detection (Hard) | 1.000 |
+| 10 | Error Handling Review (Medium) | 0.500 |
+| 11 | Documentation Quality Review (Easy-Medium) | 1.000 |
+| 12 | Concurrency & Race Condition Detection (Hard) | 0.850 |
+| 13 | API Design Review (Hard) | 0.350 |
+| 14 | Code Comparison Review (Hard) | 0.942 |
+| 15 | Dependency & Import Review (Medium) | 0.518 |
 
-**Overall Mean Score: 0.519**
+**Overall Mean Score: 0.653**
 
 To reproduce:
 ```bash
@@ -151,7 +201,7 @@ python inference.py
 | `/reset` | POST | Start new episode (`{"task_level": 1}`) |
 | `/step` | POST | Submit action, receive reward |
 | `/state` | GET | Current environment state |
-| `/tasks` | GET | List all 7 tasks |
+| `/tasks` | GET | List all 15 tasks |
 | `/health` | GET | Health check |
 
 ## Project Structure
@@ -171,7 +221,7 @@ python inference.py
     ├── tasks.py              ← Task definitions
     ├── graders.py            ← Scoring logic
     └── data/
-        └── snippets.json     ← 100 labeled code snippets
+        └── snippets.json     ← 120 labeled code snippets
 ```
 
 ## Author

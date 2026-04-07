@@ -422,27 +422,179 @@ def grade_task7(action: Action, ground_truth: Dict[str, Any]) -> Reward:
     )
 
 # ──────────────────────────────────────────────────────────────────────────────
+# Shared LLM judge for advanced tasks (8-15)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _llm_judge_advanced(action: Action, ground_truth: Dict[str, Any], rubric: str) -> float:
+    """Generic LLM judge for advanced tasks 8-15."""
+    api_base = os.getenv("API_BASE_URL", "https://api.groq.com/openai/v1")
+    api_key = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+    model = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
+    if not api_key or not model:
+        return 0.3
+    sys_prompt = (
+        f"{rubric}\n"
+        "Return ONLY JSON: {\"overall\": 0.0-1.0, \"reason\": \"one sentence\"}"
+    )
+    user_msg = f"Code:\n{ground_truth.get('code', '')}\n\nAgent analysis:\n{action.suggested_fix}"
+    try:
+        client = OpenAI(base_url=api_base, api_key=api_key)
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "system", "content": sys_prompt}, {"role": "user", "content": user_msg}],
+            temperature=0.1, max_tokens=200,
+        )
+        raw = resp.choices[0].message.content.strip()
+        if "```" in raw:
+            raw = raw.replace("```json", "").replace("```", "")
+        return max(0.0, min(float(json.loads(raw.strip()).get("overall", 0.3)), 1.0))
+    except Exception:
+        return 0.3
+
+
+# ── Task 8: Refactoring ─────────────────────────────────────────────────────
+
+def grade_task8(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    has_opps = ground_truth.get("has_refactoring_opportunities", True)
+    det = 0.25 if action.has_bug == has_opps else 0.0
+    fix = _llm_judge_advanced(action, ground_truth,
+        "Evaluate refactoring analysis. Score: found real opportunities (0-1), "
+        "specific locations cited (0-1), concrete suggestions given (0-1), overall (0-1).") * 0.75
+    total = min(det + fix, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "analysis": fix},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 9: SOLID ───────────────────────────────────────────────────────────
+
+def grade_task9(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    violations = ground_truth.get("solid_violations", ["none"])
+    has_v = violations != ["none"]
+    det = 0.30 if action.has_bug == has_v else 0.0
+    # Keyword match for principles mentioned
+    fix_text = action.suggested_fix.lower()
+    principles = ["srp", "ocp", "lsp", "isp", "dip", "single responsibility",
+                  "open/closed", "liskov", "interface segregation", "dependency inversion"]
+    keyword_score = min(sum(1 for p in principles if p in fix_text) / max(len(violations), 1), 1.0) * 0.30
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate SOLID principles analysis. Score: correctly identified violated principles (0-1), "
+        "named affected components (0-1), explained why violated (0-1), overall (0-1).") * 0.40
+    total = min(det + keyword_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "keywords": keyword_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 10: Error Handling ─────────────────────────────────────────────────
+
+def grade_task10(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    poor_handling = ground_truth.get("error_handling_quality", "good") == "poor"
+    det = 0.25 if action.has_bug == poor_handling else 0.0
+    fix_text = action.suggested_fix.lower()
+    terms = ["try", "except", "catch", "logging", "silent", "bare except", "exception"]
+    term_score = min(sum(1 for t in terms if t in fix_text) / 3, 1.0) * 0.25
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate error handling review. Score: identified all missing try/except (0-1), "
+        "flagged bare excepts (0-1), suggested specific fixes with correct exception types (0-1), overall (0-1).") * 0.50
+    total = min(det + term_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "terms": term_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 11: Documentation ──────────────────────────────────────────────────
+
+def grade_task11(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    missing_docs = not ground_truth.get("has_docstrings", True)
+    det = 0.25 if action.has_bug == missing_docs else 0.0
+    fix_text = action.suggested_fix.lower()
+    terms = ["docstring", "param", "return", "type hint", "args", "raises", ":param", "->"]
+    term_score = min(sum(1 for t in terms if t in fix_text) / 3, 1.0) * 0.25
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate documentation review. Score: identified all missing docstrings (0-1), "
+        "noted missing type hints (0-1), provided a concrete improved docstring example (0-1), overall (0-1).") * 0.50
+    total = min(det + term_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "terms": term_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 12: Concurrency ────────────────────────────────────────────────────
+
+def grade_task12(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    has_issues = ground_truth.get("has_concurrency_issues", False)
+    det = 0.30 if action.has_bug == has_issues else 0.0
+    fix_text = action.suggested_fix.lower()
+    terms = ["race condition", "lock", "mutex", "asyncio", "thread", "blocking", "deadlock", "semaphore"]
+    term_score = min(sum(1 for t in terms if t in fix_text) / 2, 1.0) * 0.20
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate concurrency analysis. Score: correctly identified race conditions/blocking calls (0-1), "
+        "explained the risk clearly (0-1), provided correct fix using locks/asyncio (0-1), overall (0-1).") * 0.50
+    total = min(det + term_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "terms": term_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 13: API Design ─────────────────────────────────────────────────────
+
+def grade_task13(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    api_issues = ground_truth.get("api_design_issues", ["none"])
+    has_issues = api_issues != ["none"]
+    det = 0.25 if action.has_bug == has_issues else 0.0
+    fix_text = action.suggested_fix.lower()
+    terms = ["parameter", "naming", "validation", "return type", "rest", "snake_case", "camelcase", "endpoint"]
+    term_score = min(sum(1 for t in terms if t in fix_text) / 3, 1.0) * 0.25
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate API design review. Score: identified naming/param issues (0-1), "
+        "flagged missing validations (0-1), provided improved signature (0-1), overall (0-1).") * 0.50
+    total = min(det + term_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "terms": term_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 14: Code Comparison ────────────────────────────────────────────────
+
+def grade_task14(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    v2_has_bugs = ground_truth.get("v2_introduces_bugs", False)
+    det = 0.25 if action.has_bug == v2_has_bugs else 0.0
+    fix_text = action.suggested_fix.lower()
+    terms = ["improvement", "better", "worse", "introduced", "regression", "verdict", "complete", "partial"]
+    term_score = min(sum(1 for t in terms if t in fix_text) / 3, 1.0) * 0.25
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate code comparison review. Score: correctly judged if v2 is improvement (0-1), "
+        "identified any new bugs introduced (0-1), gave clear verdict with reasoning (0-1), overall (0-1).") * 0.50
+    total = min(det + term_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "terms": term_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ── Task 15: Dependencies ───────────────────────────────────────────────────
+
+def grade_task15(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+    dep_issues = ground_truth.get("dependency_issues", ["none"])
+    has_issues = dep_issues != ["none"]
+    det = 0.25 if action.has_bug == has_issues else 0.0
+    fix_text = action.suggested_fix.lower()
+    matched = sum(1 for issue in dep_issues if issue != "none" and issue.lower() in fix_text)
+    issue_score = min(matched / max(len([i for i in dep_issues if i != "none"]), 1), 1.0) * 0.35
+    llm = _llm_judge_advanced(action, ground_truth,
+        "Evaluate dependency review. Score: found all unused imports (0-1), "
+        "flagged risky/deprecated packages (0-1), suggested cleaner alternatives (0-1), overall (0-1).") * 0.40
+    total = min(det + issue_score + llm, 1.0)
+    return Reward(score=total, breakdown={"detection": det, "issues": issue_score, "llm": llm},
+                  feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Grader factory
 # ──────────────────────────────────────────────────────────────────────────────
 
 def get_grader(task_level: int) -> Callable[[Action, Dict[str, Any]], Reward]:
-    """Return the grading function for the given task level.
-
-    Args:
-        task_level: 1 through 7.
-
-    Returns:
-        A callable (action, ground_truth) -> Reward.
-    """
+    """Return the grading function for the given task level (1-15)."""
     graders = {
-        1: grade_task1,
-        2: grade_task2,
-        3: grade_task3,
-        4: grade_task4,
-        5: grade_task5,
-        6: grade_task6,
-        7: grade_task7,
+        1: grade_task1, 2: grade_task2, 3: grade_task3,
+        4: grade_task4, 5: grade_task5, 6: grade_task6, 7: grade_task7,
+        8: grade_task8, 9: grade_task9, 10: grade_task10, 11: grade_task11,
+        12: grade_task12, 13: grade_task13, 14: grade_task14, 15: grade_task15,
     }
     if task_level not in graders:
         raise ValueError(f"No grader for task level {task_level}")
     return graders[task_level]
+

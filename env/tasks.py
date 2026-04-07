@@ -145,58 +145,206 @@ TASK_7 = TaskConfig(
     max_score=1.0,
 )
 
-_TASKS = {1: TASK_1, 2: TASK_2, 3: TASK_3, 4: TASK_4, 5: TASK_5, 6: TASK_6, 7: TASK_7}
+TASK_8 = TaskConfig(
+    task_id="refactoring_detection",
+    level=8,
+    name="Refactoring Opportunity Detection",
+    description=(
+        "Identify specific refactoring opportunities in the code. "
+        "Look for: extract_method (long functions), replace_conditional_with_polymorphism, "
+        "introduce_parameter_object (too many params), remove_duplicate_code, "
+        "decompose_conditional (complex if/else). "
+        "In suggested_fix, list each opportunity with: refactor_type, exact location, and suggested change."
+    ),
+    action_space={
+        "has_bug": "bool — does the code have refactoring opportunities?",
+        "bug_type": "use 'logic_error' for structural issues",
+        "severity": "low/medium/high based on impact",
+        "suggested_fix": "JSON list of {refactor_type, location, issue, suggested_change}",
+    },
+    max_score=1.0,
+)
+
+TASK_9 = TaskConfig(
+    task_id="solid_violations",
+    level=9,
+    name="SOLID Principles Violation Detection",
+    description=(
+        "Detect violations of SOLID principles: "
+        "SRP (Single Responsibility — class does too much), "
+        "OCP (Open/Closed — not extensible without modification), "
+        "LSP (Liskov Substitution — subclass breaks parent contract), "
+        "ISP (Interface Segregation — fat interfaces), "
+        "DIP (Dependency Inversion — depends on concretions not abstractions). "
+        "In suggested_fix, list each violation: violated_principle, component, reason."
+    ),
+    action_space={
+        "has_bug": "bool — are there SOLID violations?",
+        "bug_type": "use 'logic_error' for design violations",
+        "severity": "high for SRP/DIP, medium for OCP/ISP/LSP",
+        "suggested_fix": "JSON list of {violated_principle, component, reason}",
+    },
+    max_score=1.0,
+)
+
+TASK_10 = TaskConfig(
+    task_id="error_handling_review",
+    level=10,
+    name="Error Handling Review",
+    description=(
+        "Evaluate error handling quality. Check for: "
+        "missing try/except around risky operations (I/O, network, parsing), "
+        "bare except clauses catching all exceptions, "
+        "wrong exception types used, "
+        "no logging on failures, "
+        "silent failures that swallow errors. "
+        "In suggested_fix: provide error_handling_score (0-10), list issues, and fix_suggestions."
+    ),
+    action_space={
+        "has_bug": "bool — is error handling inadequate?",
+        "bug_type": "use 'logic_error' for error handling gaps",
+        "severity": "high for silent failures, medium for bare except",
+        "suggested_fix": "JSON with {error_handling_score, issues: [], fix_suggestions: []}",
+    },
+    max_score=1.0,
+)
+
+TASK_11 = TaskConfig(
+    task_id="documentation_review",
+    level=11,
+    name="Documentation Quality Review",
+    description=(
+        "Evaluate documentation completeness. Check for: "
+        "missing docstrings on public functions/classes, "
+        "missing parameter descriptions, "
+        "missing return type descriptions, "
+        "absent type hints, "
+        "misleading or outdated comments. "
+        "In suggested_fix: provide doc_quality_score (0-10), list missing items, example improvement."
+    ),
+    action_space={
+        "has_bug": "bool — is documentation inadequate?",
+        "bug_type": "use 'logic_error' for documentation gaps",
+        "severity": "medium for missing docstrings, low for style issues",
+        "suggested_fix": "JSON with {doc_quality_score, missing: [], example_improvement: str}",
+    },
+    max_score=1.0,
+)
+
+TASK_12 = TaskConfig(
+    task_id="concurrency_review",
+    level=12,
+    name="Concurrency & Race Condition Detection",
+    description=(
+        "Detect concurrency and async issues: "
+        "shared mutable state without locks, "
+        "missing asyncio locks or semaphores, "
+        "blocking calls inside async functions (time.sleep instead of asyncio.sleep), "
+        "potential deadlocks from lock ordering, "
+        "thread-unsafe operations on shared collections. "
+        "In suggested_fix: list each issue with issue_type, affected_code, risk, fix."
+    ),
+    action_space={
+        "has_bug": "bool — are there concurrency issues?",
+        "bug_type": "use 'performance_issue' for async, 'logic_error' for race conditions",
+        "severity": "critical for race conditions, high for blocking async",
+        "suggested_fix": "JSON list of {issue_type, affected_code, risk, fix}",
+    },
+    max_score=1.0,
+)
+
+TASK_13 = TaskConfig(
+    task_id="api_design_review",
+    level=13,
+    name="API Design Review",
+    description=(
+        "Evaluate API/function design quality: "
+        "naming consistency (snake_case vs camelCase), "
+        "too many parameters (>5 is a smell), "
+        "inconsistent return types, "
+        "missing input validation, "
+        "poor REST design (wrong HTTP methods, non-RESTful naming). "
+        "In suggested_fix: provide api_score (0-10), list issues, improved_signature."
+    ),
+    action_space={
+        "has_bug": "bool — does the API have design issues?",
+        "bug_type": "use 'logic_error' for API design problems",
+        "severity": "high for validation gaps, medium for naming/params",
+        "suggested_fix": "JSON with {api_score, issues: [], improved_signature: str}",
+    },
+    max_score=1.0,
+)
+
+TASK_14 = TaskConfig(
+    task_id="code_comparison",
+    level=14,
+    name="Code Comparison Review",
+    description=(
+        "Compare two versions of code (v1 vs v2 provided in context). "
+        "Determine: is v2 an improvement over v1? "
+        "Did the refactor introduce new bugs? "
+        "Was the fix complete or partial? "
+        "In suggested_fix: provide {improvement: yes/no, new_issues: [], verdict: str, reason: str}."
+    ),
+    action_space={
+        "has_bug": "bool — did v2 introduce new bugs compared to v1?",
+        "bug_type": "use appropriate type if new bug introduced",
+        "severity": "severity of any new bugs introduced",
+        "suggested_fix": "JSON with {improvement, new_issues: [], verdict: str, reason: str}",
+    },
+    max_score=1.0,
+)
+
+TASK_15 = TaskConfig(
+    task_id="dependency_review",
+    level=15,
+    name="Dependency & Import Review",
+    description=(
+        "Analyze import and dependency quality: "
+        "unused imports that add dead weight, "
+        "risky/deprecated packages (e.g. pickle for untrusted data, exec/eval usage), "
+        "over-importing (importing entire modules when only 1 function needed), "
+        "missing __all__ for public API control. "
+        "In suggested_fix: provide {unused_imports: [], risky_dependencies: [], cleaner_imports: []}."
+    ),
+    action_space={
+        "has_bug": "bool — are there import/dependency issues?",
+        "bug_type": "use 'security_vulnerability' for risky deps, 'logic_error' for unused",
+        "severity": "high for security risks, low for unused imports",
+        "suggested_fix": "JSON with {unused_imports: [], risky_dependencies: [], cleaner_imports: []}",
+    },
+    max_score=1.0,
+)
+
+_TASKS = {
+    1: TASK_1, 2: TASK_2, 3: TASK_3, 4: TASK_4, 5: TASK_5,
+    6: TASK_6, 7: TASK_7, 8: TASK_8, 9: TASK_9, 10: TASK_10,
+    11: TASK_11, 12: TASK_12, 13: TASK_13, 14: TASK_14, 15: TASK_15,
+}
 
 
 def get_task(level: TaskLevel) -> TaskConfig:
-    """Return the task configuration for the given level.
-
-    Args:
-        level: Task level (1, 2, or 3).
-
-    Returns:
-        TaskConfig for the requested level.
-
-    Raises:
-        ValueError: If level is not 1, 2, or 3.
-    """
+    """Return the task configuration for the given level."""
     if level not in _TASKS:
-        raise ValueError(
-            f"Invalid task level: {level}. Must be one of {list(_TASKS.keys())}."
-        )
+        raise ValueError(f"Invalid task level: {level}. Must be one of {list(_TASKS.keys())}.")
     return _TASKS[level]
 
 
 def list_all_tasks() -> List[TaskConfig]:
-    """Return all task configurations in order.
-
-    Returns:
-        List of all TaskConfigs.
-    """
-    return [TASK_1, TASK_2, TASK_3, TASK_4, TASK_5, TASK_6, TASK_7]
+    """Return all task configurations in order."""
+    return [_TASKS[i] for i in sorted(_TASKS.keys())]
 
 
 def get_task_description_for_prompt(level: TaskLevel) -> str:
-    """Return a prompt-ready description for the given task level.
-
-    This is used by the inference script to build the system prompt
-    so the LLM agent understands what is expected.
-
-    Args:
-        level: Task level (1, 2, or 3).
-
-    Returns:
-        A multi-line string suitable for inclusion in an LLM prompt.
-    """
+    """Return a prompt-ready description for the given task level."""
     task = get_task(level)
-
     action_lines = "\n".join(
         f"  - {field}: {desc}" for field, desc in task.action_space.items()
     )
-
     return (
         f"Task: {task.name} (Level {task.level})\n"
         f"Description: {task.description}\n"
         f"Action space:\n{action_lines}\n"
         f"Maximum score: {task.max_score}"
     )
+

@@ -53,6 +53,46 @@ tasks:
     difficulty: hard
     description: "Assess testability and identify missing unit test cases"
 
+  - id: refactoring_detection
+    level: 8
+    difficulty: medium
+    description: "Identify extract_method, parameter_object, and duplicate code refactoring opportunities"
+
+  - id: solid_violations
+    level: 9
+    difficulty: hard
+    description: "Detect SRP, OCP, LSP, ISP, DIP violations in class and module design"
+
+  - id: error_handling_review
+    level: 10
+    difficulty: medium
+    description: "Evaluate missing try/except, bare excepts, silent failures, and logging gaps"
+
+  - id: documentation_review
+    level: 11
+    difficulty: easy
+    description: "Assess missing docstrings, type hints, and parameter descriptions"
+
+  - id: concurrency_review
+    level: 12
+    difficulty: hard
+    description: "Detect race conditions, blocking async calls, and missing locks"
+
+  - id: api_design_review
+    level: 13
+    difficulty: hard
+    description: "Evaluate naming consistency, parameter count, validation, and REST design"
+
+  - id: code_comparison
+    level: 14
+    difficulty: hard
+    description: "Compare v1 vs v2: determine improvement, new bugs, and verdict"
+
+  - id: dependency_review
+    level: 15
+    difficulty: medium
+    description: "Identify unused imports, risky packages (pickle/eval), and over-importing"
+
 observation_space:
   type: object
   fields:

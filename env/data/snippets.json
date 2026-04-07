@@ -30,7 +30,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_002",
@@ -63,7 +78,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_003",
@@ -96,7 +126,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_004",
@@ -129,7 +174,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_005",
@@ -162,7 +222,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_006",
@@ -195,7 +270,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_007",
@@ -228,7 +318,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_008",
@@ -261,7 +366,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_009",
@@ -294,7 +414,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_010",
@@ -327,7 +462,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_011",
@@ -360,7 +510,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_012",
@@ -393,7 +558,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_013",
@@ -426,7 +606,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_014",
@@ -459,7 +654,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_015",
@@ -492,7 +702,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_016",
@@ -525,7 +750,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_017",
@@ -558,7 +798,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_018",
@@ -591,7 +846,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_019",
@@ -624,7 +894,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_020",
@@ -657,7 +942,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_021",
@@ -690,7 +990,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_022",
@@ -723,7 +1038,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_023",
@@ -756,7 +1086,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_024",
@@ -789,7 +1134,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_025",
@@ -822,7 +1182,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_026",
@@ -855,7 +1230,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_027",
@@ -888,7 +1278,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_028",
@@ -921,7 +1326,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_029",
@@ -954,7 +1374,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_030",
@@ -987,7 +1422,22 @@
     "missing_tests": [
       "null input",
       "empty array"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_031",
@@ -1017,7 +1467,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_032",
@@ -1047,7 +1512,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_033",
@@ -1077,7 +1557,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_034",
@@ -1107,7 +1602,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_035",
@@ -1137,7 +1647,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_036",
@@ -1167,7 +1692,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_037",
@@ -1197,7 +1737,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_038",
@@ -1227,7 +1782,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_039",
@@ -1257,7 +1827,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_040",
@@ -1287,7 +1872,22 @@
     "is_testable": true,
     "missing_tests": [
       "negative inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_041",
@@ -1317,7 +1917,22 @@
     "is_testable": true,
     "missing_tests": [
       "null input"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_042",
@@ -1347,7 +1962,22 @@
     "is_testable": true,
     "missing_tests": [
       "null input"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_043",
@@ -1377,7 +2007,22 @@
     "is_testable": true,
     "missing_tests": [
       "null input"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_044",
@@ -1407,7 +2052,22 @@
     "is_testable": true,
     "missing_tests": [
       "null input"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_045",
@@ -1437,7 +2097,22 @@
     "is_testable": true,
     "missing_tests": [
       "null input"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_046",
@@ -1467,7 +2142,22 @@
     "is_testable": false,
     "missing_tests": [
       "too complex to test"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_047",
@@ -1497,7 +2187,22 @@
     "is_testable": false,
     "missing_tests": [
       "too complex to test"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_048",
@@ -1527,7 +2232,22 @@
     "is_testable": false,
     "missing_tests": [
       "too complex to test"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_049",
@@ -1557,7 +2277,22 @@
     "is_testable": false,
     "missing_tests": [
       "too complex to test"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_050",
@@ -1587,7 +2322,22 @@
     "is_testable": false,
     "missing_tests": [
       "too complex to test"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_051",
@@ -1616,7 +2366,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_052",
@@ -1645,7 +2410,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_053",
@@ -1674,7 +2454,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_054",
@@ -1703,7 +2498,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_055",
@@ -1732,7 +2542,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_056",
@@ -1761,7 +2586,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_057",
@@ -1790,7 +2630,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_058",
@@ -1819,7 +2674,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_059",
@@ -1848,7 +2718,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_060",
@@ -1877,7 +2762,22 @@
     "is_testable": true,
     "missing_tests": [
       "invalid id format"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_061",
@@ -1906,7 +2806,22 @@
     "is_testable": false,
     "missing_tests": [
       "malicious path inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_062",
@@ -1935,7 +2850,22 @@
     "is_testable": false,
     "missing_tests": [
       "malicious path inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_063",
@@ -1964,7 +2894,22 @@
     "is_testable": false,
     "missing_tests": [
       "malicious path inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_064",
@@ -1993,7 +2938,22 @@
     "is_testable": false,
     "missing_tests": [
       "malicious path inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_065",
@@ -2022,7 +2982,22 @@
     "is_testable": false,
     "missing_tests": [
       "malicious path inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_066",
@@ -2051,7 +3026,22 @@
     "is_testable": true,
     "missing_tests": [
       "HTML injection tags"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_067",
@@ -2080,7 +3070,22 @@
     "is_testable": true,
     "missing_tests": [
       "HTML injection tags"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_068",
@@ -2109,7 +3114,22 @@
     "is_testable": true,
     "missing_tests": [
       "HTML injection tags"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_069",
@@ -2138,7 +3158,22 @@
     "is_testable": true,
     "missing_tests": [
       "HTML injection tags"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_070",
@@ -2167,7 +3202,22 @@
     "is_testable": true,
     "missing_tests": [
       "HTML injection tags"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_071",
@@ -2196,7 +3246,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_072",
@@ -2225,7 +3290,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_073",
@@ -2254,7 +3334,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_074",
@@ -2283,7 +3378,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_075",
@@ -2312,7 +3422,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_076",
@@ -2341,7 +3466,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_077",
@@ -2370,7 +3510,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_078",
@@ -2399,7 +3554,22 @@
     "is_testable": true,
     "missing_tests": [
       "large arrays"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_079",
@@ -2428,7 +3598,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_080",
@@ -2457,7 +3642,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_081",
@@ -2486,7 +3686,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_082",
@@ -2515,7 +3730,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_083",
@@ -2544,7 +3774,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_084",
@@ -2573,7 +3818,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_085",
@@ -2602,7 +3862,22 @@
     "is_testable": true,
     "missing_tests": [
       "empty users list"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_086",
@@ -2632,7 +3907,22 @@
     "missing_tests": [
       "fetch failure edge cases",
       "network errors"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_087",
@@ -2662,7 +3952,22 @@
     "missing_tests": [
       "fetch failure edge cases",
       "network errors"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_088",
@@ -2692,7 +3997,22 @@
     "missing_tests": [
       "fetch failure edge cases",
       "network errors"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_089",
@@ -2722,7 +4042,22 @@
     "missing_tests": [
       "fetch failure edge cases",
       "network errors"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_090",
@@ -2752,7 +4087,22 @@
     "missing_tests": [
       "fetch failure edge cases",
       "network errors"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_091",
@@ -2786,7 +4136,22 @@
       "none input",
       "empty string",
       "very long string"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_092",
@@ -2820,7 +4185,22 @@
       "none input",
       "empty string",
       "very long string"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_093",
@@ -2854,7 +4234,22 @@
       "none input",
       "empty string",
       "very long string"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_094",
@@ -2888,7 +4283,22 @@
       "none input",
       "empty string",
       "very long string"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_095",
@@ -2922,7 +4332,22 @@
       "none input",
       "empty string",
       "very long string"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_096",
@@ -2955,7 +4380,22 @@
     "missing_tests": [
       "null inputs",
       "undefined inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_097",
@@ -2988,7 +4428,22 @@
     "missing_tests": [
       "null inputs",
       "undefined inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_098",
@@ -3021,7 +4476,22 @@
     "missing_tests": [
       "null inputs",
       "undefined inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_099",
@@ -3054,7 +4524,22 @@
     "missing_tests": [
       "null inputs",
       "undefined inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   },
   {
     "id": "snippet_100",
@@ -3087,6 +4572,893 @@
     "missing_tests": [
       "null inputs",
       "undefined inputs"
-    ]
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": true,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_101",
+    "language": "python",
+    "code": "def process_order(user_id, product_id, qty, price, discount, shipping, tax, coupon, address, notes):\n    total = price * qty\n    if discount > 0:\n        total = total - (total * discount / 100)\n    if coupon == 'SAVE10':\n        total = total - 10\n    if coupon == 'SAVE20':\n        total = total - 20\n    total = total + shipping + tax\n    print(f'Order for {user_id}: ${total}')\n    return total",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Extract apply_discount, apply_coupon, calculate_total; introduce OrderParams object",
+    "difficulty": "medium",
+    "category": "refactoring",
+    "task_levels": [
+      8
+    ],
+    "code_smells": [
+      "god_function",
+      "magic_numbers",
+      "too_many_params"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "coupon edge cases",
+      "negative discount"
+    ],
+    "solid_violations": [
+      "srp"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "too_many_params"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_102",
+    "language": "python",
+    "code": "def get_user_report(users):\n    result = []\n    for u in users:\n        if u['age'] > 18:\n            if u['status'] == 'active':\n                if u['score'] > 50:\n                    result.append(u['name'])\n    return result",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Decompose nested conditionals into a helper is_eligible(u) function",
+    "difficulty": "easy",
+    "category": "refactoring",
+    "task_levels": [
+      1,
+      2,
+      3,
+      8
+    ],
+    "code_smells": [
+      "deep_nesting"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "empty list",
+      "all ineligible"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_103",
+    "language": "javascript",
+    "code": "function sendEmail(to, subject, body, cc, bcc, attachments, priority, template, locale, retries) {\n  // validate\n  if (!to || !subject || !body) return false;\n  // format\n  let msg = template ? renderTemplate(template, {to, subject, body}) : body;\n  // send\n  for (let i = 0; i < retries; i++) {\n    try { return mailer.send({to, subject, msg, cc, bcc, attachments, priority}); }\n    catch(e) { if (i === retries-1) throw e; }\n  }\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Extract EmailConfig object; split validate/format/send into separate functions",
+    "difficulty": "medium",
+    "category": "refactoring",
+    "task_levels": [
+      8
+    ],
+    "code_smells": [
+      "too_many_params",
+      "mixed_responsibilities"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(retries)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "retry exhaustion",
+      "missing required fields"
+    ],
+    "solid_violations": [
+      "srp"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "too_many_params"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_104",
+    "language": "python",
+    "code": "class DataProcessor:\n    def process(self, data):\n        # Clean\n        data = [x.strip() for x in data if x]\n        # Validate\n        data = [x for x in data if len(x) > 2]\n        # Transform\n        data = [x.upper() for x in data]\n        # Same transform again in reporting\n        report = [x.upper() for x in data]\n        return data, report",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "low",
+    "fix": "Extract clean(), validate(), transform() methods; remove duplicate transform in report",
+    "difficulty": "easy",
+    "category": "refactoring",
+    "task_levels": [
+      8
+    ],
+    "code_smells": [
+      "duplicate_logic",
+      "god_function"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "empty data",
+      "all empty strings"
+    ],
+    "solid_violations": [
+      "srp"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_105",
+    "language": "python",
+    "code": "def calculate(a, b, c, d, e):\n    x = a + b\n    y = c * d\n    z = x - y + e\n    if z > 100:\n        z = 100\n    elif z < 0:\n        z = 0\n    return z",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "Could introduce clamp() helper but core logic is clean",
+    "difficulty": "easy",
+    "category": "clean",
+    "task_levels": [
+      1,
+      8
+    ],
+    "code_smells": [
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "boundary values: z=100, z=0"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_106",
+    "language": "python",
+    "code": "class UserManager:\n    def create_user(self, data): ...\n    def delete_user(self, uid): ...\n    def send_welcome_email(self, uid): ...\n    def generate_pdf_report(self, uid): ...\n    def log_activity(self, uid, action): ...\n    def backup_to_s3(self): ...",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "high",
+    "fix": "Split into UserRepository, EmailService, ReportService, ActivityLogger, BackupService",
+    "difficulty": "medium",
+    "category": "solid",
+    "task_levels": [
+      9
+    ],
+    "code_smells": [
+      "god_class"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "each responsibility in isolation"
+    ],
+    "solid_violations": [
+      "srp",
+      "isp"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_107",
+    "language": "python",
+    "code": "class Discount:\n    def apply(self, order, discount_type):\n        if discount_type == 'percent':\n            return order.total * 0.9\n        elif discount_type == 'fixed':\n            return order.total - 10\n        elif discount_type == 'bogo':\n            return order.total / 2\n        # New type requires modifying this class\n        raise ValueError('Unknown discount')",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Use polymorphism: PercentDiscount, FixedDiscount, BogoDiscount implementing Discount interface",
+    "difficulty": "medium",
+    "category": "solid",
+    "task_levels": [
+      9
+    ],
+    "code_smells": [
+      "conditional_complexity"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "unknown discount type"
+    ],
+    "solid_violations": [
+      "ocp"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_108",
+    "language": "python",
+    "code": "class MySQLDatabase:\n    def connect(self): ...\n    def query(self, sql): ...\n\nclass UserService:\n    def __init__(self):\n        self.db = MySQLDatabase()  # hardcoded concrete class\n\n    def get_user(self, uid):\n        return self.db.query(f'SELECT * FROM users WHERE id={uid}')",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "high",
+    "fix": "Inject DatabaseInterface via constructor; UserService depends on abstraction not MySQLDatabase",
+    "difficulty": "medium",
+    "category": "solid",
+    "task_levels": [
+      9
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "sql_injection"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": false,
+    "missing_tests": [
+      "mock database"
+    ],
+    "solid_violations": [
+      "dip"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_109",
+    "language": "python",
+    "code": "def read_config(path):\n    try:\n        with open(path) as f:\n            return json.load(f)\n    except:\n        return {}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "Replace bare except with except (FileNotFoundError, json.JSONDecodeError) as e; log the error",
+    "difficulty": "easy",
+    "category": "error_handling",
+    "task_levels": [
+      1,
+      2,
+      3,
+      10
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "corrupt json",
+      "missing file"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_110",
+    "language": "javascript",
+    "code": "async function fetchUser(id) {\n  const res = await fetch(`/api/users/${id}`);\n  const data = await res.json();\n  return data;\n}",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "high",
+    "fix": "Check res.ok before parsing; wrap in try/catch; throw meaningful error on failure",
+    "difficulty": "easy",
+    "category": "error_handling",
+    "task_levels": [
+      1,
+      2,
+      10
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "404 response",
+      "network failure",
+      "invalid json"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_111",
+    "language": "python",
+    "code": "def calc(x, y, m=1):\n    # do the thing\n    return (x + y) * m",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "Add docstring with Args/Returns; rename to calculate_weighted_sum; add type hints",
+    "difficulty": "easy",
+    "category": "documentation",
+    "task_levels": [
+      1,
+      11
+    ],
+    "code_smells": [
+      "poor_naming"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "negative multiplier",
+      "zero values"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_112",
+    "language": "python",
+    "code": "def process_payment(amount, currency, method, user_id, idempotency_key):\n    \"\"\"Process it.\"\"\"\n    pass",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "Expand docstring: add Args with types, Returns, Raises (PaymentError), example usage",
+    "difficulty": "easy",
+    "category": "documentation",
+    "task_levels": [
+      11
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid currency",
+      "duplicate idempotency_key"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_113",
+    "language": "python",
+    "code": "import threading\n\ncounter = 0\n\ndef increment():\n    global counter\n    for _ in range(1000):\n        counter += 1\n\nthreads = [threading.Thread(target=increment) for _ in range(10)]\nfor t in threads: t.start()\nfor t in threads: t.join()",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "critical",
+    "fix": "Add threading.Lock(); use lock.acquire()/lock.release() or with lock: around counter += 1",
+    "difficulty": "hard",
+    "category": "concurrency",
+    "task_levels": [
+      1,
+      2,
+      3,
+      12
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "assert final counter == 10000"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": true,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_114",
+    "language": "python",
+    "code": "import asyncio\nimport time\n\nasync def fetch_data(url):\n    time.sleep(2)  # blocking call in async function\n    return requests.get(url).text",
+    "has_bug": true,
+    "bug_type": "performance_issue",
+    "severity": "high",
+    "fix": "Replace time.sleep(2) with await asyncio.sleep(2); use aiohttp instead of requests.get",
+    "difficulty": "medium",
+    "category": "concurrency",
+    "task_levels": [
+      1,
+      2,
+      12
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "blocks_event_loop",
+    "is_testable": true,
+    "missing_tests": [
+      "network timeout",
+      "invalid url"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": true,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_115",
+    "language": "python",
+    "code": "def CreateNewUser(FirstName, LastName, emailAddress, pw, DOB, PhoneNum, countryCode, isAdmin):\n    if not emailAddress or '@' not in emailAddress:\n        pass  # silently ignore\n    return db.insert('users', locals())",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "high",
+    "fix": "Rename to create_user; use snake_case for all params; raise ValueError for invalid email; add return type",
+    "difficulty": "medium",
+    "category": "api_design",
+    "task_levels": [
+      1,
+      13
+    ],
+    "code_smells": [
+      "poor_naming",
+      "too_many_params"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "invalid email",
+      "missing required fields"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "naming_inconsistency",
+      "missing_validation",
+      "too_many_params"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": true,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_116",
+    "language": "javascript",
+    "code": "app.get('/deleteUser', (req, res) => {\n  const id = req.query.id;\n  db.delete('users', id);\n  res.send('done');\n});",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Use DELETE /users/:id HTTP method; validate id; add authentication middleware; return 204 No Content",
+    "difficulty": "medium",
+    "category": "api_design",
+    "task_levels": [
+      1,
+      5,
+      13
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "broken_access_control"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "unauthenticated request",
+      "invalid id"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "wrong_http_method",
+      "missing_auth",
+      "missing_validation"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_117",
+    "language": "python",
+    "code": "# Version 1 (buggy):\ndef divide(a, b):\n    return a / b\n\n# Version 2 (fixed):\ndef divide(a, b):\n    if b == 0:\n        raise ValueError('Cannot divide by zero')\n    return a / b",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "v2 correctly adds zero division guard; improvement is complete",
+    "difficulty": "easy",
+    "category": "comparison",
+    "task_levels": [
+      14
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "b=0",
+      "negative numbers"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": "def divide(a, b):\n    if b == 0:\n        raise ValueError('Cannot divide by zero')\n    return a / b"
+  },
+  {
+    "id": "snippet_118",
+    "language": "python",
+    "code": "# Version 1:\ndef get_items(ids):\n    return [db.get(i) for i in ids]\n\n# Version 2 (attempted optimization):\ndef get_items(ids):\n    if not ids: return None  # bug: should return []\n    return [db.get(i) for i in ids]",
+    "has_bug": true,
+    "bug_type": "logic_error",
+    "severity": "medium",
+    "fix": "v2 introduced a bug: returns None for empty list instead of []; should return []",
+    "difficulty": "medium",
+    "category": "comparison",
+    "task_levels": [
+      1,
+      14
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "empty ids list"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "none"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": true,
+    "code_v2": "def get_items(ids):\n    if not ids: return None\n    return [db.get(i) for i in ids]"
+  },
+  {
+    "id": "snippet_119",
+    "language": "python",
+    "code": "import os\nimport sys\nimport json\nimport pickle\nimport math\nimport random\n\ndef get_user_data(raw):\n    return pickle.loads(raw)  # deserialize from network",
+    "has_bug": true,
+    "bug_type": "security_vulnerability",
+    "severity": "critical",
+    "fix": "Remove pickle (unsafe for untrusted input); use json.loads(); remove unused os, sys, math, random imports",
+    "difficulty": "medium",
+    "category": "dependencies",
+    "task_levels": [
+      1,
+      5,
+      15
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "insecure_deserialization"
+    ],
+    "time_complexity": "O(n)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "malicious payload"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "poor",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "pickle",
+      "os_unused",
+      "sys_unused",
+      "math_unused",
+      "random_unused"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
+  },
+  {
+    "id": "snippet_120",
+    "language": "python",
+    "code": "from datetime import datetime, timedelta, timezone, date, time as t\nimport numpy as np\nimport pandas as pd\n\ndef get_current_time():\n    return datetime.now()",
+    "has_bug": false,
+    "bug_type": "no_bug",
+    "severity": "none",
+    "fix": "Remove unused timedelta, timezone, date, t, numpy, pandas imports; only datetime.now() is used",
+    "difficulty": "easy",
+    "category": "dependencies",
+    "task_levels": [
+      1,
+      15
+    ],
+    "code_smells": [
+      "none"
+    ],
+    "owasp_issues": [
+      "none"
+    ],
+    "time_complexity": "O(1)",
+    "performance_issue": "none",
+    "is_testable": true,
+    "missing_tests": [
+      "timezone awareness"
+    ],
+    "solid_violations": [
+      "none"
+    ],
+    "error_handling_quality": "good",
+    "has_docstrings": false,
+    "has_concurrency_issues": false,
+    "api_design_issues": [
+      "none"
+    ],
+    "dependency_issues": [
+      "timedelta_unused",
+      "timezone_unused",
+      "numpy_unused",
+      "pandas_unused"
+    ],
+    "has_refactoring_opportunities": false,
+    "v2_introduces_bugs": false,
+    "code_v2": null
   }
 ]

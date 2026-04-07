@@ -16,7 +16,7 @@ BugType = Literal[
     "no_bug",
 ]
 Severity = Literal["low", "medium", "high", "critical", "none"]
-TaskLevel = Literal[1, 2, 3, 4, 5, 6, 7]
+TaskLevel = Literal[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 
 class Observation(BaseModel):
@@ -30,7 +30,7 @@ class Observation(BaseModel):
         ..., description="Programming language of the snippet (python / javascript)"
     )
     task_level: TaskLevel = Field(
-        ..., description="Current task level: 1=Easy, 2=Medium, 3=Hard"
+        ..., description="Current task level: 1-7 standard, 8-15 advanced review tasks"
     )
     step_number: int = Field(
         ..., ge=0, description="Current step number in the episode"

@@ -48,7 +48,7 @@ class CodeReviewEnv:
         )
         all_snippets = self._load_snippets(path)
         self._snippets: List[Dict[str, Any]] = [
-            s for s in all_snippets if task_level in s.get("task_levels", [1, 2, 3, 4, 5, 6, 7])
+            s for s in all_snippets if task_level in s.get("task_levels", list(range(1, 16)))
         ]
         if not self._snippets:
             logger.warning(
@@ -211,5 +211,13 @@ class CodeReviewEnv:
             5: "Perform an OWASP security audit. Check for: SQL injection, XSS, hardcoded secrets, path traversal. State the vulnerability type and provide a specific secure fix.",
             6: "Analyze time complexity. State the current Big-O notation and identify the specific bottleneck. Suggest a faster algorithm with its Big-O in your fix.",
             7: "Assess testability and list missing tests. In suggested_fix, provide 2-3 specific test cases with: input values, expected output, and what edge case they cover.",
+            8: "Identify refactoring opportunities. In suggested_fix, return JSON: [{refactor_type, location, issue, suggested_change}]. Be specific about line numbers or code patterns.",
+            9: "Detect SOLID principle violations. In suggested_fix, return JSON: [{violated_principle, component, reason}]. Name the exact class/function and which of SRP/OCP/LSP/ISP/DIP is violated.",
+            10: "Review error handling quality. In suggested_fix, return JSON: {error_handling_score: 0-10, issues: [], fix_suggestions: []}. Check for missing try/except, bare except, silent failures.",
+            11: "Review documentation quality. In suggested_fix, return JSON: {doc_quality_score: 0-10, missing: [], example_improvement: 'full docstring example'}. Check docstrings, type hints, param docs.",
+            12: "Detect concurrency issues. In suggested_fix, return JSON: [{issue_type, affected_code, risk, fix}]. Check for race conditions, blocking async calls, missing locks.",
+            13: "Review API design. In suggested_fix, return JSON: {api_score: 0-10, issues: [], improved_signature: 'fixed function signature'}. Check naming, params count, validation, return types.",
+            14: "Compare v1 vs v2 (both in the code block). In suggested_fix, return JSON: {improvement: 'yes/no', new_issues: [], verdict: 'one sentence', reason: 'explanation'}.",
+            15: "Review imports and dependencies. In suggested_fix, return JSON: {unused_imports: [], risky_dependencies: [], cleaner_imports: []}. Flag unused, risky (pickle/eval), and over-imported items.",
         }
         return hints.get(self.task_level)
