@@ -29,8 +29,10 @@ load_dotenv()
 # ──────────────────────────────────────────────────────────────────────────────
 
 API_BASE_URL = os.getenv("API_BASE_URL", "https://api.groq.com/openai/v1")
-API_KEY = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
 MODEL_NAME = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
+HF_TOKEN = os.getenv("HF_TOKEN")                     # no default — must be set
+API_KEY = HF_TOKEN or os.getenv("API_KEY")           # fallback alias for OpenAI client
+LOCAL_IMAGE_NAME = os.getenv("LOCAL_IMAGE_NAME")     # optional — used with from_docker_image()
 BENCHMARK = "codereview-env"
 MAX_STEPS = 8
 TEMPERATURE = 0.2
