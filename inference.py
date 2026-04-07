@@ -232,8 +232,8 @@ def run_task(
         action_str = f"has_bug={action.has_bug},bug_type={action.bug_type}"
         print(f"[STEP] step=1 action={action_str} reward={reward.score:.2f} done={str(done).lower()} error={error_msg}")
 
-        # Emit mandatory [END] line
-        print(f"[END] success={str(reward.is_correct).lower()} steps=1 rewards={reward.score:.2f}")
+        # Emit mandatory [END] line (with score= as per updated spec)
+        print(f"[END] success={str(reward.is_correct).lower()} steps=1 score={reward.score:.2f} rewards={reward.score:.2f}")
 
         print(
             f"  Episode {i+1}/{num_episodes}: "
