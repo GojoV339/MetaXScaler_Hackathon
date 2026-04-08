@@ -582,10 +582,6 @@ def grade_task15(action: Action, ground_truth: Dict[str, Any]) -> Reward:
                   feedback=f"Score: {total:.2f}", is_correct=total >= 0.6)
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Grader factory
-# ──────────────────────────────────────────────────────────────────────────────
-
 def get_grader(task_level: int) -> Callable[[Action, Dict[str, Any]], Reward]:
     """Return the grading function for the given task level (1-15)."""
     graders = {
@@ -596,5 +592,15 @@ def get_grader(task_level: int) -> Callable[[Action, Dict[str, Any]], Reward]:
     }
     if task_level not in graders:
         raise ValueError(f"No grader for task level {task_level}")
-    return graders[task_level]
+        
+    base_grader = graders[task_level]
+    
+    def clamped_grader(action: Action, ground_truth: Dict[str, Any]) -> Reward:
+        reward = base_grader(action, ground_truth)
+        # Deep valuation explicitly fails if score == 0.0 or score == 1.0
+        # Clamp strictly between 0 and 1
+        reward.score = max(0.01, min(0.99, float(reward.score)))
+        return reward
+        
+    return clamped_grader
 
