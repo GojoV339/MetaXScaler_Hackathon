@@ -35,7 +35,7 @@ import torch
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 ENV_URL = os.getenv("ENV_URL", "https://dharaneswarreddy-codereview-env.hf.space")
-GROQ_API_KEY = os.getenv("MOONSHOT_API_KEY", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 HF_TOKEN = os.getenv("HF_TOKEN", "")
 TRAIN_MODEL = os.getenv("TRAIN_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
 SAVE_REPO = os.getenv("SAVE_REPO", "")
