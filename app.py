@@ -14,7 +14,9 @@ from env import CodeReviewEnv
 # Load .env file
 load_dotenv()
 from env.models import Action, Observation, State, StepResponse, Reward
+from env.models import PRAction, PRObservation, PRStepResponse, PRState
 from env.tasks import list_all_tasks, get_task
+from env.pr_environment import PRReviewEnv
 from typing import Dict, Any, Optional
 from pydantic import BaseModel
 
@@ -40,6 +42,7 @@ app.add_middleware(
 
 # Global environment instance
 env: Optional[CodeReviewEnv] = None
+pr_env: Optional[PRReviewEnv] = None
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -152,7 +155,61 @@ async def root():
     return {
         "name": "CodeReview-Env",
         "description": "RL environment for AI code review",
-        "endpoints": ["/reset", "/step", "/state", "/tasks", "/health"],
+        "endpoints": ["/reset", "/step", "/state", "/tasks", "/health",
+                     "/pr/reset", "/pr/step", "/pr/state", "/pr/info"],
+    }
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PR Pipeline Endpoints (additive — existing endpoints unchanged)
+# ──────────────────────────────────────────────────────────────────────────────
+
+@app.post("/pr/reset")
+async def pr_reset(body: dict = {}):
+    """Start a new PR review episode."""
+    global pr_env
+    try:
+        difficulty = body.get("difficulty", None)
+        pr_env = PRReviewEnv(difficulty_filter=difficulty)
+        obs = pr_env.reset()
+        return obs
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/pr/step")
+async def pr_step(action: PRAction):
+    """Submit action for current step in PR review."""
+    global pr_env
+    if pr_env is None:
+        raise HTTPException(status_code=400, detail="PR environment not initialized. Call /pr/reset first.")
+    try:
+        obs, reward, done, info = pr_env.step(action)
+        return PRStepResponse(observation=obs, reward=reward, done=done, info=info)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/pr/state")
+async def pr_state():
+    """Get current PR review episode state."""
+    global pr_env
+    if pr_env is None:
+        raise HTTPException(status_code=400, detail="PR environment not initialized. Call /pr/reset first.")
+    return pr_env.state()
+
+
+@app.get("/pr/info")
+async def pr_info():
+    """Metadata about the PR pipeline."""
+    return {
+        "name": "PR Review Pipeline",
+        "episode_structure": "N file_review steps + 1 final_verdict step",
+        "reward_formula": "episode = 0.6 * mean(per_file) + 0.4 * verdict_score",
+        "verdicts": ["APPROVE", "REQUEST_CHANGES", "REJECT"],
+        "anti_hacking": ["always-approve detector", "trivial-fix penalty", "copy-paste penalty"],
     }
 
 

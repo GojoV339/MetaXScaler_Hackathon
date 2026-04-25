@@ -14,11 +14,14 @@ import os
 import json
 import re
 import sys
+import time
 from dotenv import load_dotenv
 from openai import OpenAI
 from env import CodeReviewEnv, list_all_tasks
 from env.models import Action
 from env.tasks import get_task_description_for_prompt
+from env.pr_environment import PRReviewEnv
+from env.models import PRAction
 from typing import Dict, Any, Optional, List
 
 # Load .env file (keys stored here, never hardcoded)
@@ -218,6 +221,7 @@ def run_task(
                 temperature=TEMPERATURE,
                 max_tokens=MAX_TOKENS,
             )
+            time.sleep(3)
             raw_response = response.choices[0].message.content or ""
         except Exception as e:
             error_msg = str(e).replace("\n", " ")
@@ -314,6 +318,204 @@ def run_all_tasks() -> Dict[str, Any]:
         "overall_mean": round(overall_mean, 4),
     }
 
+# ──────────────────────────────────────────────────────────────────────────────
+# PR Review Pipeline (additive — all existing code above unchanged)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def build_pr_system_prompt(step_type: str) -> str:
+    """System prompt per step type."""
+    base = (
+        "You are a senior software engineer performing a Pull Request code review.\n"
+        "You have seen production outages from exactly these kinds of bugs.\n"
+        "Return ONLY valid JSON. No explanation outside the JSON.\n\n"
+    )
+    if step_type == "file_review":
+        return base + (
+            "TASK: Review the code file for bugs, security issues, performance problems, "
+            "code smells, or design issues.\n\n"
+            "Return this JSON:\n"
+            '{"has_bug": true/false, "bug_type": "logic_error|security_vulnerability|'
+            'performance_issue|syntax_error|no_bug", "severity": "low|medium|high|critical|none", '
+            '"suggested_fix": "specific actionable fix here", '
+            '"better_version": null, "comparison_reason": null, '
+            '"verdict": null, "verdict_summary": null, "critical_issues": null}'
+        )
+    elif step_type == "comparison":
+        return base + (
+            "TASK: Compare VERSION 1 and VERSION 2 of the same code file.\n"
+            "Decide which version is better (v1, v2, or equal) and explain specifically why.\n\n"
+            "Return this JSON:\n"
+            '{"has_bug": false, "bug_type": "no_bug", "severity": "none", "suggested_fix": "", '
+            '"better_version": "v1|v2|equal", '
+            '"comparison_reason": "specific reason: what exactly is better and why", '
+            '"verdict": null, "verdict_summary": null, "critical_issues": null}'
+        )
+    else:  # final_verdict
+        return base + (
+            "TASK: Based on all files reviewed, give your final PR verdict.\n"
+            "APPROVE = all issues minor or non-existent, safe to merge.\n"
+            "REQUEST_CHANGES = fixable issues that must be addressed before merge.\n"
+            "REJECT = critical unfixable issues or fundamental design failures.\n\n"
+            "Return this JSON:\n"
+            '{"has_bug": false, "bug_type": "no_bug", "severity": "none", "suggested_fix": "", '
+            '"better_version": null, "comparison_reason": null, '
+            '"verdict": "APPROVE|REQUEST_CHANGES|REJECT", '
+            '"verdict_summary": "2-sentence summary of main finding", '
+            '"critical_issues": ["filename: specific issue", ...]}'
+        )
+
+
+def build_pr_user_prompt(obs) -> str:
+    """User prompt based on observation step type."""
+    if obs.step_type == "final_verdict":
+        findings = "\n".join(f"  - {f}" for f in obs.previous_findings)
+        return (
+            f"PR: {obs.pr_title}\n"
+            f"Description: {obs.pr_description}\n\n"
+            f"Files reviewed:\n{findings}\n\n"
+            "Give your final verdict. Return ONLY the JSON."
+        )
+    elif obs.step_type == "comparison":
+        ctx = ""
+        if obs.previous_findings:
+            ctx = "Previous findings:\n" + "\n".join(f"  - {f}" for f in obs.previous_findings) + "\n\n"
+        return (
+            f"PR: {obs.pr_title}\n"
+            f"File: {obs.current_file.file_name} "
+            f"(file {obs.files_reviewed + 1}/{obs.total_files})\n\n"
+            f"{ctx}"
+            f"VERSION 1:\n```{obs.current_file.language}\n{obs.current_file.code}\n```\n\n"
+            f"VERSION 2:\n```{obs.current_file.language}\n{obs.current_file.code_v2}\n```\n\n"
+            "Which version is better and why? Return ONLY the JSON."
+        )
+    else:
+        ctx = ""
+        if obs.previous_findings:
+            ctx = "Previous findings:\n" + "\n".join(f"  - {f}" for f in obs.previous_findings) + "\n\n"
+        return (
+            f"PR: {obs.pr_title}\n"
+            f"File: {obs.current_file.file_name} ({obs.current_file.language}) "
+            f"(file {obs.files_reviewed + 1}/{obs.total_files})\n\n"
+            f"{ctx}"
+            f"```{obs.current_file.language}\n{obs.current_file.code}\n```\n\n"
+            "Review this file. Return ONLY the JSON."
+        )
+
+
+def parse_pr_action(text: str) -> PRAction:
+    """Parse LLM output to PRAction. Never crashes."""
+    safe = PRAction(has_bug=False, bug_type="no_bug", severity="none", suggested_fix="")
+    if not text:
+        return safe
+    text = re.sub(r"^```(?:json)?\s*\n?", "", text.strip())
+    text = re.sub(r"\n?```\s*$", "", text).strip()
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError:
+        m = re.search(r"\{[^{}]*\}", text, re.DOTALL)
+        if m:
+            try:
+                parsed = json.loads(m.group())
+            except Exception:
+                return safe
+        else:
+            return safe
+    try:
+        return PRAction(**{k: v for k, v in parsed.items() if v is not None})
+    except Exception:
+        return safe
+
+
+def run_pr_episode(env: PRReviewEnv, client) -> dict:
+    """Run one complete PR review episode."""
+    obs = env.reset()
+    step_results = []
+
+    while True:
+        sys_prompt = build_pr_system_prompt(obs.step_type)
+        user_prompt = build_pr_user_prompt(obs)
+
+        try:
+            kwargs = {
+                "model": MODEL_NAME,
+                "messages": [
+                    {"role": "system", "content": sys_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                "temperature": TEMPERATURE,
+                "max_tokens": 600,
+            }
+            # Kimi K2.6: disable thinking for consistent JSON
+            if "kimi" in MODEL_NAME.lower() or "moonshot" in API_BASE_URL.lower():
+                kwargs["extra_body"] = {"thinking": {"type": "disabled"}}
+
+            response = client.chat.completions.create(**kwargs)
+            time.sleep(3)
+            raw = response.choices[0].message.content or ""
+        except Exception as e:
+            print(f"  LLM error: {e}")
+            raw = ""
+
+        action = parse_pr_action(raw)
+        next_obs, reward, done, info = env.step(action)
+
+        step_results.append({
+            "step_type": info.get("step_type"),
+            "file": info.get("file_name", "verdict"),
+            "score": reward.score,
+            "feedback": reward.feedback,
+        })
+
+        tag = f"[{info['step_type']}]"
+        print(f"  {tag} {info.get('file_name', 'verdict')}: score={reward.score:.3f}")
+
+        if done:
+            ep_score = info.get("episode_score", 0.0)
+            verdict = action.verdict
+            correct = info.get("correct_verdict")
+            print(f"  Episode: {ep_score:.3f} | Verdict: {verdict} (correct: {correct})")
+            return {
+                "pr_id": info["pr_id"],
+                "episode_score": ep_score,
+                "verdict": verdict,
+                "correct_verdict": correct,
+                "verdict_correct": info.get("verdict_correct", False),
+                "steps": step_results,
+            }
+
+        obs = next_obs
+
+
+def run_pr_baseline(num_episodes: int = 5) -> dict:
+    """Run PR pipeline baseline evaluation."""
+    if not API_KEY:
+        print("ERROR: API key not set"); sys.exit(1)
+
+    client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
+    env = PRReviewEnv()
+    results = []
+
+    print(f"\n{'='*60}")
+    print("  PR Review Pipeline — Baseline")
+    print(f"{'='*60}")
+
+    for i in range(num_episodes):
+        print(f"\nEpisode {i+1}/{num_episodes}:")
+        result = run_pr_episode(env, client)
+        results.append(result)
+
+    scores = [r["episode_score"] for r in results]
+    verdict_acc = sum(1 for r in results if r["verdict_correct"]) / len(results)
+
+    print(f"\n{'='*60}")
+    print(f"  Mean episode score:  {sum(scores)/len(scores):.3f}")
+    print(f"  Verdict accuracy:    {verdict_acc:.1%}")
+    print(f"{'='*60}")
+    return {"episodes": results, "mean_score": round(sum(scores)/len(scores), 3)}
+
 
 if __name__ == "__main__":
-    run_all_tasks()
+    if len(sys.argv) > 1 and sys.argv[1] == "pr":
+        run_pr_baseline(num_episodes=5)
+    else:
+        run_all_tasks()

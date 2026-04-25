@@ -136,3 +136,74 @@ class StepResponse(BaseModel):
     info: Dict[str, Any] = Field(
         default_factory=dict, description="Additional metadata about the step"
     )
+
+
+# ── PR Review Pipeline Models (additive — do not change above) ────────────
+
+class FileObservation(BaseModel):
+    """One file within a PR being reviewed."""
+    file_name: str
+    code: str
+    language: str
+    task_type: int
+    is_comparison: bool = False
+    code_v2: Optional[str] = None
+
+
+class PRObservation(BaseModel):
+    """What the agent sees at each step of a PR review episode."""
+    pr_id: str
+    pr_title: str
+    pr_description: str
+    current_file: FileObservation
+    files_reviewed: int
+    total_files: int
+    step_type: Literal["file_review", "comparison", "final_verdict"]
+    previous_findings: List[str]
+    step_number: int
+
+
+class PRAction(BaseModel):
+    """What the agent returns at each step of a PR review."""
+    # For file_review steps
+    has_bug: bool = False
+    bug_type: BugType = "no_bug"
+    severity: Severity = "none"
+    suggested_fix: str = ""
+    # For comparison steps
+    better_version: Optional[Literal["v1", "v2", "equal"]] = None
+    comparison_reason: Optional[str] = None
+    # For final_verdict step
+    verdict: Optional[Literal["APPROVE", "REQUEST_CHANGES", "REJECT"]] = None
+    verdict_summary: Optional[str] = None
+    critical_issues: Optional[List[str]] = None
+
+
+class PRReward(BaseModel):
+    """Reward returned at each step of PR review."""
+    score: float = Field(ge=0.0, le=1.0)
+    breakdown: Dict[str, float]
+    feedback: str
+    is_correct: bool
+    step_type: str
+
+
+class PRState(BaseModel):
+    """Full state of a PR review episode."""
+    pr_id: str
+    pr_title: str
+    files_reviewed: int
+    total_files: int
+    per_file_scores: List[float]
+    cumulative_score: float
+    episode_done: bool
+    findings: List[str]
+    current_step_type: str
+
+
+class PRStepResponse(BaseModel):
+    """HTTP response from /pr/step."""
+    observation: Optional[PRObservation] = None
+    reward: PRReward
+    done: bool
+    info: Dict[str, Any]

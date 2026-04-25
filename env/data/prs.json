@@ -1,0 +1,406 @@
+[
+  {
+    "pr_id": "pr_001",
+    "title": "Fix divide-by-zero in math utils",
+    "description": "Fixes division error and adds safe arithmetic helpers",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "divide-by-zero bug in snippet_001 must be fixed before merge",
+    "files": [
+      {"file_name": "math_utils.py", "snippet_id": "snippet_001", "task_type": 1, "is_comparison": false},
+      {"file_name": "helpers.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false},
+      {"file_name": "tests.py", "snippet_id": "snippet_007", "task_type": 7, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_002",
+    "title": "Add array search and sort utilities",
+    "description": "New utility functions for array operations",
+    "difficulty": "easy",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "All functions are clean and correct",
+    "files": [
+      {"file_name": "search.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false},
+      {"file_name": "multiply.js", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false},
+      {"file_name": "adult_check.js", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_003",
+    "title": "Fix off-by-one in indexOf and get_last_element",
+    "description": "Fixes boundary conditions in array access functions",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Off-by-one bugs in both snippet_002 and snippet_010",
+    "files": [
+      {"file_name": "array_utils.py", "snippet_id": "snippet_002", "task_type": 2, "is_comparison": false},
+      {"file_name": "indexOf.js", "snippet_id": "snippet_010", "task_type": 2, "is_comparison": false},
+      {"file_name": "reverse.py", "snippet_id": "snippet_007", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_004",
+    "title": "Fix infinite recursion in factorial",
+    "description": "Addresses infinite recursion and adds error handling",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Infinite recursion bug in factorial must be fixed",
+    "files": [
+      {"file_name": "recursion.py", "snippet_id": "snippet_004", "task_type": 3, "is_comparison": false},
+      {"file_name": "sum_list.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false},
+      {"file_name": "greet.js", "snippet_id": "snippet_005", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_005",
+    "title": "Improve string utilities",
+    "description": "Adds vowel counter and string reversal functions",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Vowel counter misses uppercase vowels",
+    "files": [
+      {"file_name": "vowels.py", "snippet_id": "snippet_011", "task_type": 2, "is_comparison": false},
+      {"file_name": "reverse.py", "snippet_id": "snippet_007", "task_type": 1, "is_comparison": false},
+      {"file_name": "clone.js", "snippet_id": "snippet_012", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_006",
+    "title": "Add safe dict merge and list dedup",
+    "description": "Utility functions for data manipulation",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "merge_dicts mutates original dict, remove_duplicates modifies list during iteration",
+    "files": [
+      {"file_name": "dict_utils.py", "snippet_id": "snippet_015", "task_type": 3, "is_comparison": false},
+      {"file_name": "list_utils.py", "snippet_id": "snippet_013", "task_type": 3, "is_comparison": false},
+      {"file_name": "age_parser.js", "snippet_id": "snippet_014", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_007",
+    "title": "Clean math and array helpers",
+    "description": "Well-tested utility functions with no issues",
+    "difficulty": "easy",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "All functions are clean and well-implemented",
+    "files": [
+      {"file_name": "multiply.js", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false},
+      {"file_name": "search.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false},
+      {"file_name": "sum.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_008",
+    "title": "Fix syntax error in isEven",
+    "description": "Fixes assignment-vs-comparison bug",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Assignment operator used instead of comparison in isEven",
+    "files": [
+      {"file_name": "validation.js", "snippet_id": "snippet_003", "task_type": 2, "is_comparison": false},
+      {"file_name": "adult.js", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false},
+      {"file_name": "max_finder.py", "snippet_id": "snippet_009", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_009",
+    "title": "Refactor array utilities with tests",
+    "description": "Clean utility functions for production use",
+    "difficulty": "easy",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "All functions are clean, no issues found",
+    "files": [
+      {"file_name": "binary_search.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false},
+      {"file_name": "reverse.py", "snippet_id": "snippet_007", "task_type": 7, "is_comparison": false},
+      {"file_name": "sum.py", "snippet_id": "snippet_006", "task_type": 7, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_010",
+    "title": "Add max finder with initialization fix",
+    "description": "Adds find_max utility and compares with improved version",
+    "difficulty": "easy",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "find_max initializes max_val to 0, fails for negative-only lists",
+    "files": [
+      {"file_name": "max.py", "snippet_id": "snippet_009", "task_type": 3, "is_comparison": false},
+      {"file_name": "multiply.js", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false},
+      {"file_name": "search.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_011",
+    "title": "Add input sanitization for user login",
+    "description": "Adds SQL query builder and user authentication logic",
+    "difficulty": "medium",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "SQL injection vulnerability via string concatenation in query builder",
+    "files": [
+      {"file_name": "auth.py", "snippet_id": "snippet_020", "task_type": 5, "is_comparison": false},
+      {"file_name": "validators.py", "snippet_id": "snippet_021", "task_type": 5, "is_comparison": false},
+      {"file_name": "middleware.py", "snippet_id": "snippet_019", "task_type": 5, "is_comparison": false},
+      {"file_name": "utils.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_012",
+    "title": "Optimize database query patterns",
+    "description": "Reduces N+1 queries in record fetching logic",
+    "difficulty": "medium",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "N+1 query pattern in get_db_records needs to use IN clause",
+    "files": [
+      {"file_name": "db.py", "snippet_id": "snippet_030", "task_type": 6, "is_comparison": false},
+      {"file_name": "cache.py", "snippet_id": "snippet_018", "task_type": 6, "is_comparison": false},
+      {"file_name": "helpers.py", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_013",
+    "title": "Add file upload handler with path validation",
+    "description": "New endpoint for file uploads with security checks",
+    "difficulty": "medium",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "Path traversal vulnerability — no sanitization of user-provided file paths",
+    "files": [
+      {"file_name": "upload.py", "snippet_id": "snippet_022", "task_type": 5, "is_comparison": false},
+      {"file_name": "storage.py", "snippet_id": "snippet_023", "task_type": 5, "is_comparison": false},
+      {"file_name": "config.py", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_014",
+    "title": "Refactor list processing and add comparison tests",
+    "description": "Improves list dedup logic and adds v2 comparison",
+    "difficulty": "medium",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Original dedup still modifies list during iteration",
+    "files": [
+      {"file_name": "list_v1.py", "snippet_id": "snippet_013", "task_type": 3, "is_comparison": true, "snippet_id_v2": "snippet_006", "better_version": "v2", "comparison_reason": "v2 uses proper set conversion without mutation during iteration"},
+      {"file_name": "vowels.py", "snippet_id": "snippet_011", "task_type": 2, "is_comparison": false},
+      {"file_name": "parser.js", "snippet_id": "snippet_014", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_015",
+    "title": "Code quality improvements across utils",
+    "description": "Addresses code smells and improves naming",
+    "difficulty": "medium",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Magic numbers and poor naming still present",
+    "files": [
+      {"file_name": "formatter.py", "snippet_id": "snippet_025", "task_type": 4, "is_comparison": false},
+      {"file_name": "converter.py", "snippet_id": "snippet_026", "task_type": 4, "is_comparison": false},
+      {"file_name": "validator.js", "snippet_id": "snippet_003", "task_type": 2, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_016",
+    "title": "Improve error handling in API client",
+    "description": "Adds try-catch blocks and proper error propagation",
+    "difficulty": "medium",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "Error handling improvements are solid, no issues",
+    "files": [
+      {"file_name": "client.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false},
+      {"file_name": "retry.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false},
+      {"file_name": "logger.py", "snippet_id": "snippet_007", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_017",
+    "title": "Refactor dict merge with safe copy",
+    "description": "Compares old and new dict merge approaches",
+    "difficulty": "medium",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "v2 correctly uses dict copy, improvement is valid",
+    "files": [
+      {"file_name": "merge_v1.py", "snippet_id": "snippet_015", "task_type": 3, "is_comparison": true, "snippet_id_v2": "snippet_017", "better_version": "v2", "comparison_reason": "v2 avoids mutating the original dict by using proper copy semantics"},
+      {"file_name": "adult.js", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false},
+      {"file_name": "multiply.js", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_018",
+    "title": "Performance fixes for sorting pipeline",
+    "description": "Reduces O(n^2) sorting to more efficient approaches",
+    "difficulty": "medium",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Nested loop sorting still has O(n^2) performance in main pipeline",
+    "files": [
+      {"file_name": "sort.py", "snippet_id": "snippet_029", "task_type": 6, "is_comparison": false},
+      {"file_name": "filter.py", "snippet_id": "snippet_028", "task_type": 6, "is_comparison": false},
+      {"file_name": "index.js", "snippet_id": "snippet_010", "task_type": 2, "is_comparison": false},
+      {"file_name": "config.py", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_019",
+    "title": "Add test coverage for edge cases",
+    "description": "Adds missing unit tests for boundary conditions",
+    "difficulty": "medium",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "Test additions are valid and cover key edge cases",
+    "files": [
+      {"file_name": "test_math.py", "snippet_id": "snippet_007", "task_type": 7, "is_comparison": false},
+      {"file_name": "test_array.py", "snippet_id": "snippet_017", "task_type": 7, "is_comparison": false},
+      {"file_name": "test_string.py", "snippet_id": "snippet_006", "task_type": 7, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_020",
+    "title": "Improve clone and merge with comparison review",
+    "description": "Fixes shallow clone issue and adds deep clone v2",
+    "difficulty": "medium",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Shallow clone in deepClone still needs to be replaced with structuredClone",
+    "files": [
+      {"file_name": "clone_v1.js", "snippet_id": "snippet_012", "task_type": 2, "is_comparison": true, "snippet_id_v2": "snippet_008", "better_version": "v2", "comparison_reason": "v2 uses proper deep clone instead of shallow Object.assign"},
+      {"file_name": "merge.py", "snippet_id": "snippet_015", "task_type": 3, "is_comparison": false},
+      {"file_name": "helpers.js", "snippet_id": "snippet_016", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_021",
+    "title": "Fix factorial and add recursive helpers with comparison",
+    "description": "Compares buggy factorial with fixed version",
+    "difficulty": "medium",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "v2 correctly fixes the infinite recursion with n-1",
+    "files": [
+      {"file_name": "factorial_v1.py", "snippet_id": "snippet_004", "task_type": 3, "is_comparison": true, "snippet_id_v2": "snippet_007", "better_version": "v2", "comparison_reason": "v2 fixes infinite recursion by using n-1 in recursive call"},
+      {"file_name": "sum.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false},
+      {"file_name": "search.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_022",
+    "title": "Add HTML template renderer with user input",
+    "description": "Server-side template rendering for user profiles",
+    "difficulty": "hard",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "XSS vulnerability — user input rendered directly in HTML without escaping",
+    "files": [
+      {"file_name": "render.py", "snippet_id": "snippet_024", "task_type": 5, "is_comparison": false},
+      {"file_name": "template.py", "snippet_id": "snippet_021", "task_type": 5, "is_comparison": false},
+      {"file_name": "handler.py", "snippet_id": "snippet_020", "task_type": 5, "is_comparison": false},
+      {"file_name": "config.py", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_023",
+    "title": "Optimize data pipeline with batch processing",
+    "description": "Replaces per-record queries with batch operations and adds comparison",
+    "difficulty": "hard",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Batch query still has performance issues with large datasets",
+    "files": [
+      {"file_name": "pipeline.py", "snippet_id": "snippet_030", "task_type": 6, "is_comparison": true, "snippet_id_v2": "snippet_017", "better_version": "v2", "comparison_reason": "v2 uses batch IN clause instead of per-record queries, fixing N+1 pattern"},
+      {"file_name": "transform.py", "snippet_id": "snippet_029", "task_type": 6, "is_comparison": false},
+      {"file_name": "validator.py", "snippet_id": "snippet_009", "task_type": 2, "is_comparison": false},
+      {"file_name": "loader.py", "snippet_id": "snippet_028", "task_type": 6, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_024",
+    "title": "Security hardening for authentication module",
+    "description": "Fixes SQL injection, adds parameterized queries",
+    "difficulty": "hard",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "Critical SQL injection still present via string concatenation in auth queries",
+    "files": [
+      {"file_name": "auth.py", "snippet_id": "snippet_020", "task_type": 5, "is_comparison": false},
+      {"file_name": "session.py", "snippet_id": "snippet_019", "task_type": 5, "is_comparison": false},
+      {"file_name": "crypto.py", "snippet_id": "snippet_022", "task_type": 5, "is_comparison": false},
+      {"file_name": "middleware.py", "snippet_id": "snippet_023", "task_type": 5, "is_comparison": false},
+      {"file_name": "config.py", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_025",
+    "title": "Comprehensive code quality pass",
+    "description": "Addresses code smells, magic numbers, and dead code across codebase",
+    "difficulty": "hard",
+    "correct_verdict": "REQUEST_CHANGES",
+    "verdict_reason": "Several code smells remain including magic numbers and poor naming",
+    "files": [
+      {"file_name": "constants.py", "snippet_id": "snippet_025", "task_type": 4, "is_comparison": false},
+      {"file_name": "processor.py", "snippet_id": "snippet_026", "task_type": 4, "is_comparison": false},
+      {"file_name": "formatter.py", "snippet_id": "snippet_013", "task_type": 4, "is_comparison": true, "snippet_id_v2": "snippet_006", "better_version": "v2", "comparison_reason": "v2 removes mutation-during-iteration anti-pattern and uses clean set conversion"},
+      {"file_name": "cache.py", "snippet_id": "snippet_018", "task_type": 6, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_026",
+    "title": "Add comprehensive test suite for core functions",
+    "description": "Tests edge cases: null inputs, empty arrays, negative numbers",
+    "difficulty": "hard",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "Test coverage improvements are thorough and well-structured",
+    "files": [
+      {"file_name": "test_divide.py", "snippet_id": "snippet_001", "task_type": 7, "is_comparison": false},
+      {"file_name": "test_search.py", "snippet_id": "snippet_017", "task_type": 7, "is_comparison": false},
+      {"file_name": "test_dedup.py", "snippet_id": "snippet_013", "task_type": 7, "is_comparison": false},
+      {"file_name": "test_vowels.py", "snippet_id": "snippet_011", "task_type": 7, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_027",
+    "title": "Refactor security validators with comparison",
+    "description": "Replaces old string-concat queries with parameterized versions",
+    "difficulty": "hard",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "Hardcoded API key found in crypto module, must be moved to environment variable",
+    "files": [
+      {"file_name": "old_auth.py", "snippet_id": "snippet_020", "task_type": 5, "is_comparison": true, "snippet_id_v2": "snippet_017", "better_version": "v2", "comparison_reason": "v2 uses parameterized queries eliminating SQL injection risk"},
+      {"file_name": "crypto.py", "snippet_id": "snippet_022", "task_type": 5, "is_comparison": false},
+      {"file_name": "session.py", "snippet_id": "snippet_019", "task_type": 5, "is_comparison": false},
+      {"file_name": "config.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_028",
+    "title": "Performance optimization for data processing",
+    "description": "Reduces nested loop complexity and adds caching layer",
+    "difficulty": "hard",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "Core sorting still O(n^2) and N+1 query pattern unresolved",
+    "files": [
+      {"file_name": "sorter.py", "snippet_id": "snippet_029", "task_type": 6, "is_comparison": false},
+      {"file_name": "fetcher.py", "snippet_id": "snippet_030", "task_type": 6, "is_comparison": false},
+      {"file_name": "cache.py", "snippet_id": "snippet_028", "task_type": 6, "is_comparison": false},
+      {"file_name": "index.js", "snippet_id": "snippet_010", "task_type": 2, "is_comparison": false},
+      {"file_name": "helpers.py", "snippet_id": "snippet_009", "task_type": 3, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_029",
+    "title": "Clean utility modules for production release",
+    "description": "Final production-ready utility collection",
+    "difficulty": "hard",
+    "correct_verdict": "APPROVE",
+    "verdict_reason": "All modules are clean, well-tested, and production-ready",
+    "files": [
+      {"file_name": "math.py", "snippet_id": "snippet_017", "task_type": 1, "is_comparison": false},
+      {"file_name": "strings.py", "snippet_id": "snippet_007", "task_type": 1, "is_comparison": false},
+      {"file_name": "arrays.py", "snippet_id": "snippet_006", "task_type": 1, "is_comparison": false},
+      {"file_name": "multiply.js", "snippet_id": "snippet_008", "task_type": 1, "is_comparison": false}
+    ]
+  },
+  {
+    "pr_id": "pr_030",
+    "title": "Full stack security audit and perf review",
+    "description": "Cross-cutting review of security and performance across entire codebase",
+    "difficulty": "hard",
+    "correct_verdict": "REJECT",
+    "verdict_reason": "Multiple critical security issues: SQL injection, XSS, and path traversal remain unresolved",
+    "files": [
+      {"file_name": "auth.py", "snippet_id": "snippet_020", "task_type": 5, "is_comparison": false},
+      {"file_name": "render.py", "snippet_id": "snippet_024", "task_type": 5, "is_comparison": false},
+      {"file_name": "upload.py", "snippet_id": "snippet_022", "task_type": 5, "is_comparison": true, "snippet_id_v2": "snippet_006", "better_version": "v2", "comparison_reason": "v2 adds proper path validation and sanitization"},
+      {"file_name": "db.py", "snippet_id": "snippet_030", "task_type": 6, "is_comparison": false},
+      {"file_name": "sort.py", "snippet_id": "snippet_029", "task_type": 6, "is_comparison": false}
+    ]
+  }
+]
