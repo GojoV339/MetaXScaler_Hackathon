@@ -392,6 +392,20 @@ def reward_function(prompts: List[str], completions: List[str], **kwargs) -> Lis
     comp_str = " | ".join(f"{k[:3]}={v:.2f}" for k, v in comp_means.items())
     print(f"  L{curriculum_level} mean={mean:.3f} | {comp_str} | hacks={hack_count} | R={[f'{r:.2f}' for r in rewards]}")
 
+    # Save detailed JSON log for post-training plotting
+    import json as _json
+    log_entry = {
+        "step": len(reward_history),
+        "mean_reward": round(mean, 4),
+        "curriculum_level": curriculum_level,
+        "hack_count": hack_count,
+        "timeout_count": timeout_count,
+        "components": {k: round(v, 4) for k, v in comp_means.items()},
+        "rewards": [round(r, 4) for r in rewards],
+    }
+    with open("training_log.jsonl", "a") as _f:
+        _f.write(_json.dumps(log_entry) + "\n")
+
     # Curriculum progression check
     recent = level_rewards.get(curriculum_level, [])[-CURRICULUM_WINDOW:]
     if len(recent) >= CURRICULUM_WINDOW:
