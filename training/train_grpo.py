@@ -25,6 +25,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from typing import List, Dict, Any
 
+# Unsloth must be imported before other heavy libraries
+from unsloth import FastLanguageModel
+import torch
+
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 ENV_URL = os.getenv("ENV_URL", "https://dharaneswarreddy-codereview-env.hf.space")
@@ -204,7 +208,6 @@ def build_dataset(tokenizer, num_samples: int = 400):
 
 def load_model():
     """Load small training model with Unsloth (4-bit)."""
-    from unsloth import FastLanguageModel
     print(f"Loading {TRAIN_MODEL} with Unsloth (4-bit)...")
 
     model, tokenizer = FastLanguageModel.from_pretrained(
