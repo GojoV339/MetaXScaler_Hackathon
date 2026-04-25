@@ -309,7 +309,7 @@ def compute_anti_hack_penalty(completion: str, action: dict) -> float:
             hack_count += 1
 
     # Trivial/empty fix at higher levels
-    fix = action.get("suggested_fix", "")
+    fix = str(action.get("suggested_fix", "") or "")
     if fix.lower().strip() in BOILERPLATE_FIXES:
         penalty -= 0.10
         hack_count += 1
