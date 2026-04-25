@@ -44,7 +44,7 @@ SAVE_REPO = os.getenv("SAVE_REPO", "")
 MAX_SEQ_LENGTH = 1024
 MAX_NEW_TOKENS = 256
 TEMPERATURE = 0.7
-NUM_TRAIN_STEPS = 200
+NUM_TRAIN_STEPS = 10
 BATCH_SIZE = 2
 GRAD_ACCUM = 4
 LEARNING_RATE = 5e-6
@@ -255,7 +255,8 @@ def score_confidence(action: dict) -> float:
 
 def score_quality(action: dict, level: int) -> float:
     """R_quality: Fix specificity and quality heuristics."""
-    fix = action.get("suggested_fix", "").strip()
+    fix = action.get("suggested_fix", "") or ""
+    fix = str(fix).strip()
 
     if level == 1:
         # Level 1 doesn't require fixes — just needs correct has_bug
