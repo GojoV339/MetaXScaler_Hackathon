@@ -26,6 +26,8 @@ import matplotlib.pyplot as plt
 from typing import List, Dict, Any
 
 # Unsloth must be imported before other heavy libraries
+import os
+os.environ["UNSLOTH_VLLM_STANDBY"] = "1"
 from unsloth import FastLanguageModel
 import torch
 
