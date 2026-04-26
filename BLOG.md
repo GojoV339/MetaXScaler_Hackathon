@@ -2,6 +2,7 @@
 
 > **MetaXScaler Hackathon — GRPO RL Environment Submission**
 > *Training `Qwen2.5-1.5B` to perform structured, senior-level code review using Group Relative Policy Optimization (GRPO), composable rubrics, and curriculum learning.*
+> **🎥 [Watch the 2-Minute Demo Video on YouTube →](https://youtu.be/3l_vD8I-V5Y)**
 
 ---
 

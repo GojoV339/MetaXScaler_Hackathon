@@ -12,7 +12,8 @@ pinned: false
 
 CodeReview-Env is a state-of-the-art Reinforcement Learning (RL) pipeline designed to train and evaluate AI agents on the complex task of software engineering code review.
 
-> 📖 **[Read the full Blog Post →](BLOG.md)**
+> **🎥 [Watch the 2-Minute Demo Video on YouTube →](https://youtu.be/3l_vD8I-V5Y)**
+> | 📖 **[Read the full Blog Post →](BLOG.md)**
 > | 🤗 **[Live Environment on HuggingFace →](https://dharaneswarreddy-codereview-env.hf.space)**
 > | 🤖 **[Trained Model →](https://huggingface.co/DharaneswarReddy/codereview-agent)**
 
