@@ -1,3 +1,13 @@
+---
+title: CodeReview-Env
+emoji: 🦀
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # CodeReview-Env: AI-Powered Code Review RL Environment
 
 CodeReview-Env is a state-of-the-art Reinforcement Learning (RL) pipeline designed to train and evaluate AI agents on the complex task of software engineering code review.
