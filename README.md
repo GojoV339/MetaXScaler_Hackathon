@@ -105,3 +105,14 @@ You need two secret keys to run the pipeline:
 1. Open `training/colab_notebook.ipynb`. 
 2. Open the **Secrets** tab (Key icon) on the left sidebar. Add both `GROQ_API_KEY` and `HF_TOKEN`.
 3. Hit **Runtime > Run All**. The script will automatically clone your repo, pull the secrets, train the model for 300 steps, graph the reward curve, and push the model to HuggingFace!
+
+---
+
+## 🚀 The Realistic Roadmap: Future Work
+
+The current version proves the core concept. The architecture, curriculum, and composable rubric system are sound. We are one data upgrade away from a genuinely publishable, production-grade reviewer. Here is what we are going to do next:
+
+1. **Replace Synthetic Data**: Swap `snippets.json` with 5,000 real PR diffs from open-source GitHub repositories (`rust-lang`, `Django`, etc.). The ground truth triple will become `(buggy diff, reviewer comment, fixed code)`.
+2. **Add Semantic Reward**: Introduce embedding-based reward. Stop rewarding models that just game the label, and start rewarding models that understand the issue using semantic similarity to real reviewer comments.
+3. **Execution-based Reward**: Implement testing verification for PRs with test coverage. If the model's suggested fix passes the test suite, `Pass = reward`. This is the strongest training signal and anchors the whole model.
+4. **Deploy as GitHub Action**: Switch output format to inline comments matching GitHub's Review API. Fine-tune on the new action space, deploy as a GitHub Action, and collect real feedback from developers.

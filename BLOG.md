@@ -160,14 +160,121 @@ Anyone can use it to train their own code review agent, plug in a different base
 
 ---
 
-## 8. What's Next
+## 8. The Realistic Roadmap: From Toy Dataset to Production-Grade Reviewer
 
-The current run shows the model mastered **format** and **fix quality** rapidly. The remaining bottleneck is **bug detection accuracy** on Level 3 tasks. Future directions:
+The current version proves the core idea works. The architecture, curriculum, and composable rubric system are sound. The next step is one data upgrade away from something genuinely publishable. Here is what we are going to do:
 
-1. **More training steps** (500+) to allow deeper curriculum exploration
-2. **Harder dataset** — adding concurrency bugs, race conditions, and distributed systems issues
-3. **Larger base model** — testing with Qwen2.5-7B or Llama-3-8B
-4. **PR Pipeline** — extending to the multi-file PR review mode already built into the environment
+---
+
+### The Core Problem to Solve First
+
+Real code review requires understanding **relationships between files**, not isolated snippets. The fundamental upgrade is moving from hand-crafted snippets to **actual PR diffs with full file context**. Everything else builds on that.
+
+---
+
+### Step 1 — Better Data (This Is 80% of the Work)
+
+Pull real PRs from GitHub targeting repositories with good PR hygiene: `rust-lang`, `CPython`, `VS Code`, `Django`. Filter for PRs that have:
+- A **linked issue** (gives you the "why")
+- A **review with requested changes** (gives you ground truth reviewer feedback)
+- A **follow-up fix commit** (confirms the bug was real)
+
+This gives you a triple: `(buggy diff, reviewer comment, fixed code)`. That triple is your ground truth — not a hand-labeled JSON field.
+
+For scale, datasets like **CodeReview-Instruct** (HuggingFace), **D-ACT**, and **CodeSearchNet** already have this structure. No scraping from scratch needed.
+
+---
+
+### Step 2 — Rethink What the Observation Looks Like
+
+Instead of serving one snippet, serve a real diff:
+
+```
+PR Title: Fix race condition in connection pool
+Changed files: 4
+─────────────────────────────
+pool.py (+47 -12)
+@@ -34,6 +34,8 @@
+-    self.connections.append(conn)
++    with self.lock:
++        self.connections.append(conn)
+
+tests/test_pool.py (+23 -0)
+...
+─────────────────────────────
+Related files (read-only context):
+base.py, config.py
+```
+
+The model now has to reason **across files**, understand the diff, and relate it to context — exactly what a human reviewer does.
+
+---
+
+### Step 3 — A Three-Layer Reward Signal
+
+**Layer 1 — Deterministic checks** *(keep what we have)*
+- Did it catch the right bug type?
+- Is severity calibrated correctly?
+
+**Layer 2 — Semantic similarity to real reviewer comments**
+Use embedding similarity between the model's suggested fix and the actual reviewer comment from the PR. If a human wrote *"you need a lock here to prevent race conditions"* and the model says *"add threading.Lock to prevent concurrent access"*, that should score high even though the words differ.
+
+**Layer 3 — Execution-based verification** *(the strongest signal)*
+For PRs where tests exist, actually run the tests against the model's suggested fix. `Pass = reward`. This completely removes the need for an LLM judge and produces the purest possible training signal.
+
+---
+
+### Step 4 — A Curriculum That Actually Matters
+
+| Level | Task |
+|:---:|:---|
+| **1** | Single-file diffs, bug is in the changed lines |
+| **2** | Multi-file diffs, bug requires reading 2 files together |
+| **3** | Bug requires understanding **unchanged** context files |
+| **4** | Architectural issues — the diff is fine but the **approach** is wrong |
+| **5** | The PR is **correct** — model must not raise false alarms |
+
+Level 5 is critical and the current version ignores it entirely. **False positive rate matters as much as detection rate** in real code review.
+
+---
+
+### Step 5 — The Output Format That Makes It Deployable
+
+The current action space is a JSON blob with `has_bug`, `bug_type`, `severity`. Real reviewers write **inline comments attached to specific line numbers**. The target output:
+
+```json
+{
+  "inline_comments": [
+    {
+      "file": "pool.py",
+      "line": 34,
+      "comment": "Race condition: multiple threads can append simultaneously",
+      "suggestion": "with self.lock:\n    self.connections.append(conn)"
+    }
+  ],
+  "verdict": "REQUEST_CHANGES",
+  "summary": "Thread safety issue in connection pool"
+}
+```
+
+This is the format **GitHub's actual review API** uses. Training toward this output makes the model directly deployable as a GitHub Action.
+
+---
+
+### Next Steps & Upgrades
+
+1. **Replace Synthetic Data**: Swap `snippets.json` with 5,000 real PR diffs from GitHub. Keep the existing environment shell — just swap the data layer and run the same GRPO training.
+2. **Add Semantic Reward**: Introduce embedding-based reward (Layer 2). This is the single biggest quality improvement — stops rewarding models that game the label, starts rewarding models that understand the issue.
+3. **Execution-based Reward**: Implement testing verification for PRs with test coverage. Even 20% of the dataset having runnable tests produces the strongest training signal and anchors the whole model.
+4. **Deploy as GitHub Action**: Switch output format to inline comments. Fine-tune on the new action space. Deploy as a GitHub Action and collect real feedback from developers.
+
+---
+
+### Why This Research Direction Is Genuinely Novel
+
+Most code review research either does **static analysis** (deterministic, no understanding) or **asks an LLM to review without training** specifically for it. What we're building — an RL-trained agent that gets rewarded for matching actual human reviewer judgments on real PRs — is a legitimately interesting research direction. The environment architecture, curriculum logic, multi-step episode structure, and anti-reward-hacking penalties all transfer directly to the serious version.
+
+> *The current toy dataset is obscuring something worth publishing. We are one data upgrade away.*
 
 ---
 
