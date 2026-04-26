@@ -1,0 +1,408 @@
+<svg width="1303pt" height="1966pt" viewBox="0.00 0.00 1303.00 1966.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 1937.38)">
+<title>GRPO_Training</title>
+<polygon fill="white" stroke="none" points="-28.8,28.8 -28.8,-1937.38 1273.8,-1937.38 1273.8,28.8 -28.8,28.8"/>
+<g id="clust1" class="cluster">
+<title>cluster_phase1</title>
+<path fill="#ebf5ff" stroke="#3b82f6" stroke-width="2" d="M755,-1413.83C755,-1413.83 929,-1413.83 929,-1413.83 935,-1413.83 941,-1419.83 941,-1425.83 941,-1425.83 941,-1888.58 941,-1888.58 941,-1894.58 935,-1900.58 929,-1900.58 929,-1900.58 755,-1900.58 755,-1900.58 749,-1900.58 743,-1894.58 743,-1888.58 743,-1888.58 743,-1425.83 743,-1425.83 743,-1419.83 749,-1413.83 755,-1413.83"/>
+<text xml:space="preserve" text-anchor="middle" x="842.4" y="-1883.98" font-family="Helvetica Bold" font-size="14.00" fill="#1e40af">   PHASE 1: PRE-FETCHING   </text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_phase2</title>
+<path fill="#f0fdf4" stroke="#22c55e" stroke-width="2" d="M286,-980.99C286,-980.99 967,-980.99 967,-980.99 973,-980.99 979,-986.99 979,-992.99 979,-992.99 979,-1354.83 979,-1354.83 979,-1360.83 973,-1366.83 967,-1366.83 967,-1366.83 286,-1366.83 286,-1366.83 280,-1366.83 274,-1360.83 274,-1354.83 274,-1354.83 274,-992.99 274,-992.99 274,-986.99 280,-980.99 286,-980.99"/>
+<text xml:space="preserve" text-anchor="middle" x="459.52" y="-1350.23" font-family="Helvetica Bold" font-size="14.00" fill="#166534">   PHASE 2: MODEL GENERATION — 4 Attempts Per Bug   </text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_phase3</title>
+<path fill="#faf5ff" stroke="#a855f7" stroke-width="2" d="M336,-493.8C336,-493.8 946,-493.8 946,-493.8 952,-493.8 958,-499.8 958,-505.8 958,-505.8 958,-944.99 958,-944.99 958,-950.99 952,-956.99 946,-956.99 946,-956.99 336,-956.99 336,-956.99 330,-956.99 324,-950.99 324,-944.99 324,-944.99 324,-505.8 324,-505.8 324,-499.8 330,-493.8 336,-493.8"/>
+<text xml:space="preserve" text-anchor="middle" x="487.57" y="-940.39" font-family="Helvetica Bold" font-size="14.00" fill="#581c87">   PHASE 3: 5-COMPONENT REWARD SCORING   </text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_phase4</title>
+<path fill="#fffbeb" stroke="#f59e0b" stroke-width="2" d="M20,-166.4C20,-166.4 304,-166.4 304,-166.4 310,-166.4 316,-172.4 316,-178.4 316,-178.4 316,-612.93 316,-612.93 316,-618.93 310,-624.93 304,-624.93 304,-624.93 20,-624.93 20,-624.93 14,-624.93 8,-618.93 8,-612.93 8,-612.93 8,-178.4 8,-178.4 8,-172.4 14,-166.4 20,-166.4"/>
+<text xml:space="preserve" text-anchor="middle" x="132.68" y="-608.33" font-family="Helvetica Bold" font-size="14.00" fill="#92400e">   PHASE 4: GRPO POLICY UPDATE   </text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_legend</title>
+<path fill="white" stroke="#94a3b8" stroke-dasharray="5,2" d="M965,-1797.66C965,-1797.66 1225,-1797.66 1225,-1797.66 1231,-1797.66 1237,-1803.66 1237,-1809.66 1237,-1809.66 1237,-1879.66 1237,-1879.66 1237,-1885.66 1231,-1891.66 1225,-1891.66 1225,-1891.66 965,-1891.66 965,-1891.66 959,-1891.66 953,-1885.66 953,-1879.66 953,-1879.66 953,-1809.66 953,-1809.66 953,-1803.66 959,-1797.66 965,-1797.66"/>
+<text xml:space="preserve" text-anchor="middle" x="1007.83" y="-1876.86" font-family="Helvetica Bold" font-size="12.00" fill="#475569">   KEY INSIGHT   </text>
+</g>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5" cx="842" cy="-1833.46" rx="80.04" ry="24.32"/>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1836.76" font-family="Helvetica,sans-Serif" font-size="11.00">Start Training Script</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1823.56" font-family="Helvetica,sans-Serif" font-size="11.00">(train_grpo.py)</text>
+</g>
+<!-- api_reset -->
+<g id="node2" class="node">
+<title>api_reset</title>
+<path fill="#dbeafe" stroke="#60a5fa" stroke-width="1.5" d="M880.79,-1731.13C880.79,-1731.13 803.21,-1731.13 803.21,-1731.13 797.21,-1731.13 791.21,-1725.13 791.21,-1719.13 791.21,-1719.13 791.21,-1707.13 791.21,-1707.13 791.21,-1701.13 797.21,-1695.13 803.21,-1695.13 803.21,-1695.13 880.79,-1695.13 880.79,-1695.13 886.79,-1695.13 892.79,-1701.13 892.79,-1707.13 892.79,-1707.13 892.79,-1719.13 892.79,-1719.13 892.79,-1725.13 886.79,-1731.13 880.79,-1731.13"/>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1716.43" font-family="Helvetica,sans-Serif" font-size="11.00">Call  POST /reset</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1703.23" font-family="Helvetica,sans-Serif" font-size="11.00">× N times</text>
+</g>
+<!-- start&#45;&gt;api_reset -->
+<g id="edge1" class="edge">
+<title>start-&gt;api_reset</title>
+<path fill="none" stroke="#3b82f6" stroke-width="1.5" d="M842,-1808.51C842,-1789.9 842,-1763.98 842,-1744.01"/>
+<polygon fill="#3b82f6" stroke="#3b82f6" stroke-width="1.5" points="845.5,-1744.15 842,-1734.15 838.5,-1744.15 845.5,-1744.15"/>
+<text xml:space="preserve" text-anchor="middle" x="876.19" y="-1767.13" font-family="Helvetica,sans-Serif" font-size="10.00"> requests bugs </text>
+</g>
+<!-- env -->
+<g id="node3" class="node">
+<title>env</title>
+<path fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" d="M911.6,-1600.83C911.6,-1603.21 880.4,-1605.13 842,-1605.13 803.6,-1605.13 772.4,-1603.21 772.4,-1600.83 772.4,-1600.83 772.4,-1562.13 772.4,-1562.13 772.4,-1559.76 803.6,-1557.83 842,-1557.83 880.4,-1557.83 911.6,-1559.76 911.6,-1562.13 911.6,-1562.13 911.6,-1600.83 911.6,-1600.83"/>
+<path fill="none" stroke="#2563eb" stroke-width="1.5" d="M911.6,-1600.83C911.6,-1598.46 880.4,-1596.53 842,-1596.53 803.6,-1596.53 772.4,-1598.46 772.4,-1600.83"/>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1584.78" font-family="Helvetica,sans-Serif" font-size="11.00">HF Space Server</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1571.58" font-family="Helvetica,sans-Serif" font-size="11.00">(FastAPI + snippets.json)</text>
+</g>
+<!-- api_reset&#45;&gt;env -->
+<g id="edge2" class="edge">
+<title>api_reset-&gt;env</title>
+<path fill="none" stroke="#3b82f6" stroke-width="1.5" d="M842,-1694.65C842,-1675.11 842,-1642.95 842,-1618.06"/>
+<polygon fill="#3b82f6" stroke="#3b82f6" stroke-width="1.5" points="845.5,-1618.09 842,-1608.09 838.5,-1618.09 845.5,-1618.09"/>
+<text xml:space="preserve" text-anchor="middle" x="873.96" y="-1653.13" font-family="Helvetica,sans-Serif" font-size="10.00"> fetches from</text>
+<text xml:space="preserve" text-anchor="middle" x="873.96" y="-1641.13" font-family="Helvetica,sans-Serif" font-size="10.00"> snippets.json </text>
+</g>
+<!-- dataset -->
+<g id="node4" class="node">
+<title>dataset</title>
+<polygon fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" points="889.44,-1467.83 886.44,-1471.83 865.44,-1471.83 862.44,-1467.83 794.56,-1467.83 794.56,-1431.83 889.44,-1431.83 889.44,-1467.83"/>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1453.13" font-family="Helvetica,sans-Serif" font-size="11.00">Offline Dataset</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1439.93" font-family="Helvetica,sans-Serif" font-size="11.00">N code snippets</text>
+</g>
+<!-- env&#45;&gt;dataset -->
+<g id="edge3" class="edge">
+<title>env-&gt;dataset</title>
+<path fill="none" stroke="#3b82f6" stroke-width="1.5" d="M842,-1557.31C842,-1535.9 842,-1503.98 842,-1480.67"/>
+<polygon fill="#3b82f6" stroke="#3b82f6" stroke-width="1.5" points="845.5,-1480.68 842,-1470.68 838.5,-1480.68 845.5,-1480.68"/>
+<text xml:space="preserve" text-anchor="middle" x="872.02" y="-1515.83" font-family="Helvetica,sans-Serif" font-size="10.00"> returns N</text>
+<text xml:space="preserve" text-anchor="middle" x="872.02" y="-1503.83" font-family="Helvetica,sans-Serif" font-size="10.00"> unique bugs </text>
+</g>
+<!-- bug -->
+<g id="node5" class="node">
+<title>bug</title>
+<path fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" d="M894.18,-1324.03C894.18,-1324.03 789.82,-1324.03 789.82,-1324.03 783.82,-1324.03 777.82,-1318.03 777.82,-1312.03 777.82,-1312.03 777.82,-1288.43 777.82,-1288.43 777.82,-1282.43 783.82,-1276.43 789.82,-1276.43 789.82,-1276.43 894.18,-1276.43 894.18,-1276.43 900.18,-1276.43 906.18,-1282.43 906.18,-1288.43 906.18,-1288.43 906.18,-1312.03 906.18,-1312.03 906.18,-1318.03 900.18,-1324.03 894.18,-1324.03"/>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1310.13" font-family="Helvetica Bold" font-size="11.00">Bug #N</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1296.93" font-family="Helvetica Bold" font-size="11.00">"SELECT * FROM users</text>
+<text xml:space="preserve" text-anchor="middle" x="842" y="-1283.73" font-family="Helvetica Bold" font-size="11.00">WHERE id = " + id</text>
+</g>
+<!-- dataset&#45;&gt;bug -->
+<g id="edge25" class="edge">
+<title>dataset-&gt;bug</title>
+<path fill="none" stroke="#2563eb" stroke-width="2.5" d="M842,-1431.32C842,-1408.49 842,-1367.94 842,-1338.17"/>
+<polygon fill="#2563eb" stroke="#2563eb" stroke-width="2.5" points="845.5,-1338.33 842,-1328.33 838.5,-1338.33 845.5,-1338.33"/>
+<text xml:space="preserve" text-anchor="middle" x="880.9" y="-1389.83" font-family="Helvetica,sans-Serif" font-size="10.00">  feeds snippets</text>
+<text xml:space="preserve" text-anchor="middle" x="880.9" y="-1377.83" font-family="Helvetica,sans-Serif" font-size="10.00">  to GRPOTrainer</text>
+</g>
+<!-- qwen -->
+<g id="node6" class="node">
+<title>qwen</title>
+<ellipse fill="#bbf7d0" stroke="#22c55e" stroke-width="1.5" cx="680" cy="-1174.11" rx="81.1" ry="24.32"/>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1177.41" font-family="Helvetica Bold" font-size="11.00">Qwen2.5-1.5B</text>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1164.21" font-family="Helvetica Bold" font-size="11.00">(4-bit LoRA, Unsloth)</text>
+</g>
+<!-- bug&#45;&gt;qwen -->
+<g id="edge4" class="edge">
+<title>bug-&gt;qwen</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.5" d="M811.53,-1275.89C785.29,-1255.79 747.28,-1226.66 718.86,-1204.88"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.5" points="721.11,-1202.2 711.05,-1198.9 716.85,-1207.76 721.11,-1202.2"/>
+<text xml:space="preserve" text-anchor="middle" x="784.2" y="-1234.43" font-family="Helvetica,sans-Serif" font-size="10.00"> prompt </text>
+</g>
+<!-- g1 -->
+<g id="node7" class="node">
+<title>g1</title>
+<path fill="#f0fdf4" stroke="#4ade80" stroke-width="1.5" d="M949.49,-1059.79C949.49,-1059.79 800.51,-1059.79 800.51,-1059.79 794.51,-1059.79 788.51,-1053.79 788.51,-1047.79 788.51,-1047.79 788.51,-1010.99 788.51,-1010.99 788.51,-1004.99 794.51,-998.99 800.51,-998.99 800.51,-998.99 949.49,-998.99 949.49,-998.99 955.49,-998.99 961.49,-1004.99 961.49,-1010.99 961.49,-1010.99 961.49,-1047.79 961.49,-1047.79 961.49,-1053.79 955.49,-1059.79 949.49,-1059.79"/>
+<text xml:space="preserve" text-anchor="middle" x="875" y="-1045.89" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 1</text>
+<text xml:space="preserve" text-anchor="middle" x="875" y="-1032.69" font-family="Helvetica,sans-Serif" font-size="11.00">has_bug: true</text>
+<text xml:space="preserve" text-anchor="middle" x="875" y="-1019.49" font-family="Helvetica,sans-Serif" font-size="11.00">bug_type: sql_injection</text>
+<text xml:space="preserve" text-anchor="middle" x="875" y="-1006.29" font-family="Helvetica,sans-Serif" font-size="11.00">fix: "Use parameterized queries"</text>
+</g>
+<!-- qwen&#45;&gt;g1 -->
+<g id="edge5" class="edge">
+<title>qwen-&gt;g1</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.5" d="M710.04,-1151.12C740.41,-1128.89 787.91,-1094.13 824.15,-1067.6"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.5" points="826.22,-1070.43 832.22,-1061.7 822.09,-1064.78 826.22,-1070.43"/>
+<text xml:space="preserve" text-anchor="middle" x="812.8" y="-1107.79" font-family="Helvetica,sans-Serif" font-size="10.00"> generates</text>
+<text xml:space="preserve" text-anchor="middle" x="812.8" y="-1095.79" font-family="Helvetica,sans-Serif" font-size="10.00"> 4 reviews</text>
+</g>
+<!-- g2 -->
+<g id="node8" class="node">
+<title>g2</title>
+<path fill="#f0fdf4" stroke="#4ade80" stroke-width="1.5" d="M411.71,-1059.79C411.71,-1059.79 304.29,-1059.79 304.29,-1059.79 298.29,-1059.79 292.29,-1053.79 292.29,-1047.79 292.29,-1047.79 292.29,-1010.99 292.29,-1010.99 292.29,-1004.99 298.29,-998.99 304.29,-998.99 304.29,-998.99 411.71,-998.99 411.71,-998.99 417.71,-998.99 423.71,-1004.99 423.71,-1010.99 423.71,-1010.99 423.71,-1047.79 423.71,-1047.79 423.71,-1053.79 417.71,-1059.79 411.71,-1059.79"/>
+<text xml:space="preserve" text-anchor="middle" x="358" y="-1045.89" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 2</text>
+<text xml:space="preserve" text-anchor="middle" x="358" y="-1032.69" font-family="Helvetica,sans-Serif" font-size="11.00">has_bug: true</text>
+<text xml:space="preserve" text-anchor="middle" x="358" y="-1019.49" font-family="Helvetica,sans-Serif" font-size="11.00">bug_type: security</text>
+<text xml:space="preserve" text-anchor="middle" x="358" y="-1006.29" font-family="Helvetica,sans-Serif" font-size="11.00">fix: "Sanitize user input"</text>
+</g>
+<!-- qwen&#45;&gt;g2 -->
+<g id="edge6" class="edge">
+<title>qwen-&gt;g2</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.5" d="M635.23,-1153.26C583.55,-1130.36 497.67,-1092.29 435.16,-1064.59"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.5" points="436.81,-1061.49 426.25,-1060.63 433.97,-1067.89 436.81,-1061.49"/>
+</g>
+<!-- g3 -->
+<g id="node9" class="node">
+<title>g3</title>
+<path fill="#fef2f2" stroke="#ef4444" stroke-width="1.5" d="M559.04,-1059.79C559.04,-1059.79 478.96,-1059.79 478.96,-1059.79 472.96,-1059.79 466.96,-1053.79 466.96,-1047.79 466.96,-1047.79 466.96,-1010.99 466.96,-1010.99 466.96,-1004.99 472.96,-998.99 478.96,-998.99 478.96,-998.99 559.04,-998.99 559.04,-998.99 565.04,-998.99 571.04,-1004.99 571.04,-1010.99 571.04,-1010.99 571.04,-1047.79 571.04,-1047.79 571.04,-1053.79 565.04,-1059.79 559.04,-1059.79"/>
+<text xml:space="preserve" text-anchor="middle" x="519" y="-1045.89" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 3</text>
+<text xml:space="preserve" text-anchor="middle" x="519" y="-1032.69" font-family="Helvetica,sans-Serif" font-size="11.00">has_bug: false</text>
+<text xml:space="preserve" text-anchor="middle" x="519" y="-1019.49" font-family="Helvetica,sans-Serif" font-size="11.00">bug_type: no_bug</text>
+<text xml:space="preserve" text-anchor="middle" x="519" y="-1006.29" font-family="Helvetica,sans-Serif" font-size="11.00">fix: "none"</text>
+</g>
+<!-- qwen&#45;&gt;g3 -->
+<g id="edge7" class="edge">
+<title>qwen-&gt;g3</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.5" d="M654.49,-1150.49C629.58,-1128.41 591.21,-1094.4 561.66,-1068.2"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.5" points="564.3,-1065.86 554.49,-1061.85 559.65,-1071.1 564.3,-1065.86"/>
+</g>
+<!-- g4 -->
+<g id="node10" class="node">
+<title>g4</title>
+<path fill="#f0fdf4" stroke="#4ade80" stroke-width="1.5" d="M733.66,-1059.79C733.66,-1059.79 626.34,-1059.79 626.34,-1059.79 620.34,-1059.79 614.34,-1053.79 614.34,-1047.79 614.34,-1047.79 614.34,-1010.99 614.34,-1010.99 614.34,-1004.99 620.34,-998.99 626.34,-998.99 626.34,-998.99 733.66,-998.99 733.66,-998.99 739.66,-998.99 745.66,-1004.99 745.66,-1010.99 745.66,-1010.99 745.66,-1047.79 745.66,-1047.79 745.66,-1053.79 739.66,-1059.79 733.66,-1059.79"/>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1045.89" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 4</text>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1032.69" font-family="Helvetica,sans-Serif" font-size="11.00">has_bug: true</text>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1019.49" font-family="Helvetica,sans-Serif" font-size="11.00">bug_type: sql_injection</text>
+<text xml:space="preserve" text-anchor="middle" x="680" y="-1006.29" font-family="Helvetica,sans-Serif" font-size="11.00">fix: "db.query('...?', [id])"</text>
+</g>
+<!-- qwen&#45;&gt;g4 -->
+<g id="edge8" class="edge">
+<title>qwen-&gt;g4</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.5" d="M680,-1149.22C680,-1128.31 680,-1097.45 680,-1072.42"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.5" points="683.5,-1072.58 680,-1062.58 676.5,-1072.58 683.5,-1072.58"/>
+</g>
+<!-- rubrics -->
+<g id="node11" class="node">
+<title>rubrics</title>
+<polygon fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5" points="737.62,-914.19 482.38,-914.19 482.38,-910.19 478.38,-910.19 478.38,-906.19 482.38,-906.19 482.38,-848.19 478.38,-848.19 478.38,-844.19 482.38,-844.19 482.38,-840.19 737.62,-840.19 737.62,-914.19"/>
+<polyline fill="none" stroke="#8b5cf6" stroke-width="1.5" points="482.38,-910.19 486.38,-910.19 486.38,-906.19 482.38,-906.19"/>
+<polyline fill="none" stroke="#8b5cf6" stroke-width="1.5" points="482.38,-848.19 486.38,-848.19 486.38,-844.19 482.38,-844.19"/>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-900.29" font-family="Helvetica Bold" font-size="11.00">Composable Rubric System</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-887.09" font-family="Helvetica Bold" font-size="11.00">─────────────────────────────</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-873.89" font-family="Helvetica Bold" font-size="11.00">Format (15%)  •  Detection (30%)</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-860.69" font-family="Helvetica Bold" font-size="11.00">Classification (20%)  •  Confidence (15%)</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-847.49" font-family="Helvetica Bold" font-size="11.00">Quality (20%)</text>
+</g>
+<!-- g1&#45;&gt;rubrics -->
+<g id="edge10" class="edge">
+<title>g1-&gt;rubrics</title>
+<path fill="none" stroke="#a855f7" stroke-width="1.5" d="M822.01,-998.35C782.8,-976.13 728.85,-945.55 685.18,-920.8"/>
+<polygon fill="#a855f7" stroke="#a855f7" stroke-width="1.5" points="687.01,-917.81 676.58,-915.92 683.56,-923.9 687.01,-917.81"/>
+</g>
+<!-- g2&#45;&gt;rubrics -->
+<g id="edge11" class="edge">
+<title>g2-&gt;rubrics</title>
+<path fill="none" stroke="#a855f7" stroke-width="1.5" d="M408.39,-998.35C445.6,-976.17 496.76,-945.68 538.24,-920.96"/>
+<polygon fill="#a855f7" stroke="#a855f7" stroke-width="1.5" points="539.81,-924.09 546.61,-915.97 536.23,-918.08 539.81,-924.09"/>
+</g>
+<!-- g3&#45;&gt;rubrics -->
+<g id="edge12" class="edge">
+<title>g3-&gt;rubrics</title>
+<path fill="none" stroke="#a855f7" stroke-width="1.5" d="M537.2,-998.35C549.89,-977.4 567.09,-949.01 581.58,-925.09"/>
+<polygon fill="#a855f7" stroke="#a855f7" stroke-width="1.5" points="584.45,-927.11 586.64,-916.75 578.46,-923.49 584.45,-927.11"/>
+</g>
+<!-- g4&#45;&gt;rubrics -->
+<g id="edge13" class="edge">
+<title>g4-&gt;rubrics</title>
+<path fill="none" stroke="#a855f7" stroke-width="1.5" d="M666,-998.35C656.32,-977.58 643.25,-949.52 632.16,-925.74"/>
+<polygon fill="#a855f7" stroke="#a855f7" stroke-width="1.5" points="635.42,-924.45 628.03,-916.86 629.08,-927.4 635.42,-924.45"/>
+</g>
+<!-- groq -->
+<g id="node12" class="node">
+<title>groq</title>
+<ellipse fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5" cx="757" cy="-716.53" rx="67.95" ry="33.66"/>
+<text xml:space="preserve" text-anchor="middle" x="757" y="-726.43" font-family="Helvetica,sans-Serif" font-size="11.00">Groq API</text>
+<text xml:space="preserve" text-anchor="middle" x="757" y="-713.23" font-family="Helvetica,sans-Serif" font-size="11.00">LLM-as-a-Judge</text>
+<text xml:space="preserve" text-anchor="middle" x="757" y="-700.03" font-family="Helvetica,sans-Serif" font-size="11.00">(llama-3.3-70b)</text>
+</g>
+<!-- rubrics&#45;&gt;groq -->
+<g id="edge9" class="edge">
+<title>rubrics-&gt;groq</title>
+<path fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,2" d="M643.72,-839.79C666.67,-815.02 697.03,-782.25 720.54,-756.88"/>
+<polygon fill="#7c3aed" stroke="#7c3aed" stroke-width="1.5" points="723.09,-759.27 727.32,-749.56 717.96,-754.52 723.09,-759.27"/>
+<text xml:space="preserve" text-anchor="middle" x="715.92" y="-798.19" font-family="Helvetica,sans-Serif" font-size="10.00"> evaluates</text>
+<text xml:space="preserve" text-anchor="middle" x="715.92" y="-786.19" font-family="Helvetica,sans-Serif" font-size="10.00"> fix quality </text>
+</g>
+<!-- r1 -->
+<g id="node14" class="node">
+<title>r1</title>
+<path fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5" d="M483.25,-729.19C483.25,-729.19 468.47,-721.86 468.47,-721.86 463.09,-719.19 463.09,-713.86 468.47,-711.19 468.47,-711.19 483.25,-703.86 483.25,-703.86 488.63,-701.19 499.37,-701.19 504.75,-703.86 504.75,-703.86 519.53,-711.19 519.53,-711.19 524.91,-713.86 524.91,-719.19 519.53,-721.86 519.53,-721.86 504.75,-729.19 504.75,-729.19 499.37,-731.86 488.63,-731.86 483.25,-729.19"/>
+<text xml:space="preserve" text-anchor="middle" x="494" y="-712.63" font-family="Helvetica Bold" font-size="13.00">0.91</text>
+</g>
+<!-- rubrics&#45;&gt;r1 -->
+<g id="edge14" class="edge">
+<title>rubrics-&gt;r1</title>
+<path fill="none" stroke="#16a34a" stroke-width="1.5" d="M583.39,-839.79C560.93,-809.07 529.49,-766.07 510.5,-740.1"/>
+<polygon fill="#16a34a" stroke="#16a34a" stroke-width="1.5" points="513.49,-738.25 504.76,-732.24 507.84,-742.38 513.49,-738.25"/>
+<text xml:space="preserve" text-anchor="middle" x="576.45" y="-792.19" font-family="Helvetica,sans-Serif" font-size="10.00"> scores </text>
+</g>
+<!-- r2 -->
+<g id="node15" class="node">
+<title>r2</title>
+<path fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5" d="M367.25,-729.19C367.25,-729.19 352.47,-721.86 352.47,-721.86 347.09,-719.19 347.09,-713.86 352.47,-711.19 352.47,-711.19 367.25,-703.86 367.25,-703.86 372.63,-701.19 383.37,-701.19 388.75,-703.86 388.75,-703.86 403.53,-711.19 403.53,-711.19 408.91,-713.86 408.91,-719.19 403.53,-721.86 403.53,-721.86 388.75,-729.19 388.75,-729.19 383.37,-731.86 372.63,-731.86 367.25,-729.19"/>
+<text xml:space="preserve" text-anchor="middle" x="378" y="-712.63" font-family="Helvetica Bold" font-size="13.00">0.55</text>
+</g>
+<!-- rubrics&#45;&gt;r2 -->
+<g id="edge15" class="edge">
+<title>rubrics-&gt;r2</title>
+<path fill="none" stroke="#ca8a04" stroke-width="1.5" d="M556.48,-839.59C508.01,-806.44 438.78,-759.1 402.44,-734.24"/>
+<polygon fill="#ca8a04" stroke="#ca8a04" stroke-width="1.5" points="404.79,-731.61 394.56,-728.85 400.84,-737.38 404.79,-731.61"/>
+</g>
+<!-- r3 -->
+<g id="node16" class="node">
+<title>r3</title>
+<path fill="#fecaca" stroke="#dc2626" stroke-width="1.5" d="M599.25,-729.19C599.25,-729.19 584.47,-721.86 584.47,-721.86 579.09,-719.19 579.09,-713.86 584.47,-711.19 584.47,-711.19 599.25,-703.86 599.25,-703.86 604.63,-701.19 615.37,-701.19 620.75,-703.86 620.75,-703.86 635.53,-711.19 635.53,-711.19 640.91,-713.86 640.91,-719.19 635.53,-721.86 635.53,-721.86 620.75,-729.19 620.75,-729.19 615.37,-731.86 604.63,-731.86 599.25,-729.19"/>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-712.63" font-family="Helvetica Bold" font-size="13.00">0.12</text>
+</g>
+<!-- rubrics&#45;&gt;r3 -->
+<g id="edge16" class="edge">
+<title>rubrics-&gt;r3</title>
+<path fill="none" stroke="#dc2626" stroke-width="1.5" d="M610,-839.79C610,-811.77 610,-773.52 610,-747.31"/>
+<polygon fill="#dc2626" stroke="#dc2626" stroke-width="1.5" points="613.5,-747.44 610,-737.44 606.5,-747.44 613.5,-747.44"/>
+</g>
+<!-- r4 -->
+<g id="node17" class="node">
+<title>r4</title>
+<path fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5" d="M893.25,-729.19C893.25,-729.19 878.47,-721.86 878.47,-721.86 873.09,-719.19 873.09,-713.86 878.47,-711.19 878.47,-711.19 893.25,-703.86 893.25,-703.86 898.63,-701.19 909.37,-701.19 914.75,-703.86 914.75,-703.86 929.53,-711.19 929.53,-711.19 934.91,-713.86 934.91,-719.19 929.53,-721.86 929.53,-721.86 914.75,-729.19 914.75,-729.19 909.37,-731.86 898.63,-731.86 893.25,-729.19"/>
+<text xml:space="preserve" text-anchor="middle" x="904" y="-712.63" font-family="Helvetica Bold" font-size="13.00">0.88</text>
+</g>
+<!-- rubrics&#45;&gt;r4 -->
+<g id="edge17" class="edge">
+<title>rubrics-&gt;r4</title>
+<path fill="none" stroke="#16a34a" stroke-width="1.5" d="M686.78,-839.53C707.45,-829.34 729.71,-818.08 750,-807.19 795.64,-782.69 847.46,-751.88 877.85,-733.5"/>
+<polygon fill="#16a34a" stroke="#16a34a" stroke-width="1.5" points="879.35,-736.68 886.08,-728.5 875.72,-730.7 879.35,-736.68"/>
+</g>
+<!-- antihack -->
+<g id="node13" class="node">
+<title>antihack</title>
+<path fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" d="M691.51,-551.06C691.51,-551.06 691.51,-565.61 691.51,-565.61 691.51,-571.61 686.3,-580.58 681.09,-583.56 681.09,-583.56 654.19,-598.92 654.19,-598.92 648.97,-601.89 637.76,-604.87 631.76,-604.87 631.76,-604.87 588.24,-604.87 588.24,-604.87 582.24,-604.87 571.03,-601.89 565.81,-598.92 565.81,-598.92 538.91,-583.56 538.91,-583.56 533.7,-580.58 528.49,-571.61 528.49,-565.61 528.49,-565.61 528.49,-551.06 528.49,-551.06 528.49,-545.06 533.7,-536.08 538.91,-533.11 538.91,-533.11 565.81,-517.75 565.81,-517.75 571.03,-514.77 582.24,-511.8 588.24,-511.8 588.24,-511.8 631.76,-511.8 631.76,-511.8 637.76,-511.8 648.97,-514.77 654.19,-517.75 654.19,-517.75 681.09,-533.11 681.09,-533.11 686.3,-536.08 691.51,-545.06 691.51,-551.06"/>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-574.83" font-family="Helvetica,sans-Serif" font-size="11.00">Anti-Hack Guard</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-561.63" font-family="Helvetica,sans-Serif" font-size="11.00">Repetition penalty</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-548.43" font-family="Helvetica,sans-Serif" font-size="11.00">Boilerplate penalty</text>
+<text xml:space="preserve" text-anchor="middle" x="610" y="-535.23" font-family="Helvetica,sans-Serif" font-size="11.00">Bias penalty</text>
+</g>
+<!-- compare -->
+<g id="node18" class="node">
+<title>compare</title>
+<path fill="#fef3c7" stroke="#d97706" stroke-width="1.5" d="M285.56,-582.13C285.56,-582.13 148.44,-582.13 148.44,-582.13 142.44,-582.13 136.44,-576.13 136.44,-570.13 136.44,-570.13 136.44,-546.53 136.44,-546.53 136.44,-540.53 142.44,-534.53 148.44,-534.53 148.44,-534.53 285.56,-534.53 285.56,-534.53 291.56,-534.53 297.56,-540.53 297.56,-546.53 297.56,-546.53 297.56,-570.13 297.56,-570.13 297.56,-576.13 291.56,-582.13 285.56,-582.13"/>
+<text xml:space="preserve" text-anchor="middle" x="217" y="-568.23" font-family="Helvetica Bold" font-size="11.00">Group Comparison</text>
+<text xml:space="preserve" text-anchor="middle" x="217" y="-555.03" font-family="Helvetica Bold" font-size="11.00">Rewards: [0.91, 0.55, 0.12, 0.88]</text>
+<text xml:space="preserve" text-anchor="middle" x="217" y="-541.83" font-family="Helvetica Bold" font-size="11.00">Group Average: 0.615</text>
+</g>
+<!-- r1&#45;&gt;compare -->
+<g id="edge19" class="edge">
+<title>r1-&gt;compare</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M477.91,-706.07C466.36,-699.38 450.36,-690.31 436,-682.87 382.7,-655.25 366.12,-654.71 314,-624.93 295.43,-614.33 275.75,-601.37 259,-589.77"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="261.05,-586.93 250.85,-584.07 257.04,-592.67 261.05,-586.93"/>
+</g>
+<!-- r2&#45;&gt;compare -->
+<g id="edge20" class="edge">
+<title>r2-&gt;compare</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M365.9,-703.79C341.49,-680.11 285.65,-625.93 249.71,-591.07"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="252.28,-588.68 242.66,-584.23 247.41,-593.71 252.28,-588.68"/>
+</g>
+<!-- r3&#45;&gt;antihack -->
+<g id="edge18" class="edge">
+<title>r3-&gt;antihack</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,2" d="M610,-697.91C610,-678.44 610,-646.03 610,-617.45"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.5" points="613.5,-617.75 610,-607.75 606.5,-617.75 613.5,-617.75"/>
+<text xml:space="preserve" text-anchor="middle" x="633.9" y="-640.87" font-family="Helvetica,sans-Serif" font-size="10.00"> triggered! </text>
+</g>
+<!-- r3&#45;&gt;compare -->
+<g id="edge21" class="edge">
+<title>r3-&gt;compare</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M594.78,-705.55C583.38,-698.43 567.2,-689.05 552,-682.87 480.01,-653.57 458.81,-655.04 383,-637.87 352.57,-630.98 342.86,-636.8 314,-624.93 292.94,-616.28 271.74,-602.64 254.55,-590.03"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="256.83,-587.37 246.74,-584.14 252.61,-592.96 256.83,-587.37"/>
+</g>
+<!-- r4&#45;&gt;compare -->
+<g id="edge22" class="edge">
+<title>r4-&gt;compare</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M889.5,-705.18C878.21,-697.67 861.84,-687.98 846,-682.87 760.24,-655.21 532.61,-647.36 443,-637.87 385.7,-631.8 368.18,-644.55 314,-624.93 292.27,-617.07 270.71,-603.25 253.45,-590.32"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="255.67,-587.61 245.62,-584.25 251.38,-593.14 255.67,-587.61"/>
+</g>
+<!-- update -->
+<g id="node19" class="node">
+<title>update</title>
+<polygon fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5" points="292.36,-433.8 25.64,-433.8 25.64,-346.6 298.36,-346.6 298.36,-427.8 292.36,-433.8"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="1.5" points="292.36,-433.8 292.36,-427.8"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="1.5" points="298.36,-427.8 292.36,-427.8"/>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-419.9" font-family="Helvetica,sans-Serif" font-size="11.00">LoRA Weight Update</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-406.7" font-family="Helvetica,sans-Serif" font-size="11.00">────────────────────────────</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-393.5" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 1: +0.30 above avg  →  REINFORCE</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-380.3" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 4: +0.27 above avg  →  REINFORCE</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-367.1" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 2: −0.07 below avg  →  DISCOURAGE</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-353.9" font-family="Helvetica,sans-Serif" font-size="11.00">Attempt 3: −0.50 below avg  →  STRONGLY AVOID</text>
+</g>
+<!-- compare&#45;&gt;update -->
+<g id="edge23" class="edge">
+<title>compare-&gt;update</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M209.24,-533.88C201.71,-511.14 190.01,-475.8 180.14,-445.98"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="183.5,-444.99 177.03,-436.6 176.85,-447.19 183.5,-444.99"/>
+<text xml:space="preserve" text-anchor="middle" x="219.51" y="-469.8" font-family="Helvetica,sans-Serif" font-size="10.00"> GRPO math </text>
+</g>
+<!-- curriculum -->
+<g id="node20" class="node">
+<title>curriculum</title>
+<path fill="#fde68a" stroke="#d97706" stroke-width="1.5" d="M162.84,-275.18C162.84,-275.18 64.89,-236.42 64.89,-236.42 59.32,-234.21 59.32,-229.79 64.89,-227.58 64.89,-227.58 162.84,-188.82 162.84,-188.82 168.42,-186.61 179.58,-186.61 185.16,-188.82 185.16,-188.82 283.11,-227.58 283.11,-227.58 288.68,-229.79 288.68,-234.21 283.11,-236.42 283.11,-236.42 185.16,-275.18 185.16,-275.18 179.58,-277.39 168.42,-277.39 162.84,-275.18"/>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-241.9" font-family="Helvetica,sans-Serif" font-size="11.00">Curriculum Check</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-228.7" font-family="Helvetica,sans-Serif" font-size="11.00">Rolling mean &gt; 0.45?</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-215.5" font-family="Helvetica,sans-Serif" font-size="11.00">Yes → Level Up!</text>
+</g>
+<!-- update&#45;&gt;curriculum -->
+<g id="edge24" class="edge">
+<title>update-&gt;curriculum</title>
+<path fill="none" stroke="#f59e0b" stroke-width="1.5" d="M165.31,-346.1C166.62,-329.07 168.14,-309.24 169.55,-290.99"/>
+<polygon fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" points="173.02,-291.46 170.3,-281.22 166.04,-290.93 173.02,-291.46"/>
+</g>
+<!-- loop -->
+<g id="node21" class="node">
+<title>loop</title>
+<ellipse fill="#ffedd5" stroke="#ea580c" stroke-width="1.5" cx="819" cy="-47.2" rx="75.17" ry="26.02"/>
+<text xml:space="preserve" text-anchor="middle" x="819" y="-50.8" font-family="Helvetica Bold" font-size="12.00">Next Bug</text>
+<text xml:space="preserve" text-anchor="middle" x="819" y="-36.4" font-family="Helvetica Bold" font-size="12.00">Repeat × X epochs</text>
+</g>
+<!-- curriculum&#45;&gt;loop -->
+<g id="edge26" class="edge">
+<title>curriculum-&gt;loop</title>
+<path fill="none" stroke="#ea580c" stroke-width="1.5" d="M243.64,-211.26C367.82,-176.07 626.03,-102.89 749.85,-67.8"/>
+<polygon fill="#ea580c" stroke="#ea580c" stroke-width="1.5" points="750.55,-71.24 759.22,-65.14 748.64,-64.5 750.55,-71.24"/>
+<text xml:space="preserve" text-anchor="middle" x="558.19" y="-136.4" font-family="Helvetica,sans-Serif" font-size="10.00"> next step </text>
+</g>
+<!-- result -->
+<g id="node22" class="node">
+<title>result</title>
+<path fill="#dcfce7" stroke="#16a34a" stroke-width="2.5" d="M269,-94.4C269,-94.4 79,-94.4 79,-94.4 73,-94.4 67,-88.4 67,-82.4 67,-82.4 67,-12 67,-12 67,-6 73,0 79,0 79,0 269,0 269,0 275,0 281,-6 281,-12 281,-12 281,-82.4 281,-82.4 281,-88.4 275,-94.4 269,-94.4"/>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-79.6" font-family="Helvetica Bold" font-size="12.00">TRAINED MODEL</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-65.2" font-family="Helvetica Bold" font-size="12.00">──────────────────────</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-50.8" font-family="Helvetica Bold" font-size="12.00">Reward: 0.358 → 0.454</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-36.4" font-family="Helvetica Bold" font-size="12.00">Format Score: ~1.00</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-22" font-family="Helvetica Bold" font-size="12.00">Quality Score: ~0.85</text>
+<text xml:space="preserve" text-anchor="middle" x="174" y="-7.6" font-family="Helvetica Bold" font-size="12.00">Pushed to HuggingFace Hub</text>
+</g>
+<!-- curriculum&#45;&gt;result -->
+<g id="edge28" class="edge">
+<title>curriculum-&gt;result</title>
+<path fill="none" stroke="#16a34a" stroke-width="2.5" d="M174,-183.92C174,-161.09 174,-133.39 174,-108.98"/>
+<polygon fill="#16a34a" stroke="#16a34a" stroke-width="2.5" points="177.5,-109.22 174,-99.22 170.5,-109.22 177.5,-109.22"/>
+<text xml:space="preserve" text-anchor="middle" x="197.07" y="-142.4" font-family="Helvetica,sans-Serif" font-size="10.00"> training</text>
+<text xml:space="preserve" text-anchor="middle" x="197.07" y="-130.4" font-family="Helvetica,sans-Serif" font-size="10.00"> complete </text>
+</g>
+<!-- loop&#45;&gt;bug -->
+<g id="edge27" class="edge">
+<title>loop-&gt;bug</title>
+<path fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="5,2" d="M869.64,-67C930.92,-93.42 1026,-147.82 1026,-231 1026,-1175.11 1026,-1175.11 1026,-1175.11 1026,-1229.75 969.54,-1261.95 919.17,-1279.79"/>
+<polygon fill="#ea580c" stroke="#ea580c" stroke-width="2" points="918.11,-1276.46 909.74,-1282.96 920.34,-1283.09 918.11,-1276.46"/>
+<text xml:space="preserve" text-anchor="middle" x="1052.68" y="-713.53" font-family="Helvetica,sans-Serif" font-size="10.00"> loops back </text>
+</g>
+<!-- legend -->
+<g id="node23" class="node">
+<title>legend</title>
+<polygon fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" points="1219.27,-1857.26 964.73,-1857.26 964.73,-1809.66 1225.27,-1809.66 1225.27,-1851.26 1219.27,-1857.26"/>
+<polyline fill="none" stroke="#cbd5e1" stroke-width="1.5" points="1219.27,-1857.26 1219.27,-1851.26"/>
+<polyline fill="none" stroke="#cbd5e1" stroke-width="1.5" points="1225.27,-1851.26 1219.27,-1851.26"/>
+<text xml:space="preserve" text-anchor="middle" x="1095" y="-1843.36" font-family="Helvetica,sans-Serif" font-size="11.00">1 Bug  →  4 Attempts  →  5 Rubrics  →  4 Rewards</text>
+<text xml:space="preserve" text-anchor="middle" x="1095" y="-1830.16" font-family="Helvetica,sans-Serif" font-size="11.00">GRPO compares all 4 rewards and</text>
+<text xml:space="preserve" text-anchor="middle" x="1095" y="-1816.96" font-family="Helvetica,sans-Serif" font-size="11.00">updates model weights toward the best review</text>
+</g>
+</g>
+</svg>

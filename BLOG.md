@@ -141,22 +141,9 @@ We trained `Qwen/Qwen2.5-1.5B-Instruct` using [Unsloth](https://github.com/unslo
 
 ## 6. The Pipeline: How Everything Connects
 
-```
-Colab Notebook (train_grpo.py)
-    │
-    ├─ Builds a pre-fetched dataset by calling /reset on HuggingFace Space
-    │
-    ├─ Passes code snippets to Qwen2.5-1.5B (Unsloth 4-bit)
-    │
-    ├─ Model generates 4 variations of a code review per snippet
-    │
-    ├─ Each review is submitted to /step on HuggingFace Space
-    │       └─ Space calls Groq API as LLM-as-a-Judge for fix quality
-    │
-    ├─ Local script computes 5-component reward + anti-hack penalty
-    │
-    └─ GRPO compares the 4 rewards and updates LoRA weights
-```
+![GRPO Training Pipeline — End-to-End Workflow](res/Work_Flow.svg)
+
+*The full 4-phase pipeline: Pre-fetching bugs from the live environment → Generating 4 review attempts per bug → Scoring each attempt with 5 composable rubrics → GRPO policy update toward the best-scoring review.*
 
 ---
 

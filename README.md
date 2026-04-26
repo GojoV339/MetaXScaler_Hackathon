@@ -16,6 +16,12 @@ The system operates across two main architectural boundaries:
 1. **The Environment Server (HuggingFace Space)**: A FastAPI server that acts as the "world." It holds the dataset, dishes out coding problems, and uses an LLM-as-a-Judge (powered by Groq) to evaluate the accuracy of the agent's code reviews.
 2. **The GRPO Trainer (Colab/Local)**: The training loop running `Unsloth` and `TRL`. It fetches problems from the environment, asks the local model to generate reviews, and updates the model's weights based on a **5-Component Reward System**.
 
+### GRPO Training Pipeline — End-to-End Workflow
+
+![GRPO Training Pipeline — End-to-End Workflow](res/Work_Flow.svg)
+
+*The complete 4-phase pipeline: Pre-fetching → Generation → 5-Component Scoring → GRPO Policy Update.*
+
 ---
 
 ## 🔄 Detailed Workflow: What is happening?
