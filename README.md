@@ -1,6 +1,10 @@
 # CodeReview-Env: AI-Powered Code Review RL Environment
 
-CodeReview-Env is a state-of-the-art Reinforcement Learning (RL) pipeline designed to train and evaluate AI agents on the complex task of software engineering code review. 
+CodeReview-Env is a state-of-the-art Reinforcement Learning (RL) pipeline designed to train and evaluate AI agents on the complex task of software engineering code review.
+
+> 📖 **[Read the full Blog Post →](BLOG.md)**
+> | 🤗 **[Live Environment on HuggingFace →](https://dharaneswarreddy-codereview-env.hf.space)**
+> | 🤖 **[Trained Model →](https://huggingface.co/DharaneswarReddy/codereview-agent)**
 
 Using **Unsloth**, **TRL (Transformer Reinforcement Learning)**, and **GRPO (Group Relative Policy Optimization)**, this project trains a small 1.5B parameter model (Qwen2.5-1.5B) to review code like a Senior Software Engineer. The environment simulates a realistic workflow where an agent must detect bugs, classify them, suggest actionable fixes, and avoid common AI pitfalls like "reward hacking."
 
